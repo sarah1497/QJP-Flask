@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+{% block title %} Contact Us {% endblock %}
+{% block body %}
+
+
+<!-- deafultContent tab  -->
+    <div id="deafultContent" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <div class="flex flex-col gap-5 text-black">
+          <!-- heading  -->
+          <div class="flex flex-col gap-4">
+            <h2 class="font-bold md:text-lg text-lg ml-2 b-color">Contact Us</h2>
+            <div
+              class="flex flex-col gap-1 bg-white bg-opacity-70 px-2 py-4 rounded-2xl"
+            >
+              <h4 class="flex text-sm md:text-base font-medium b-color">
+                Let's Meet Virtually
+              </h4>
+              <span class="flex c-text-sm c-md:text-xs md:text-sm tracking-tight text-black"
+                >Want to discuss your services and your requirements, We are all
+                ears.Book an appointment with the management of Qatar Jobs
+                Portal.</span
+              >
+            </div>
+          </div>
+
+          <!-- Calender & Email Cards  -->
+          <div class="flex items-center justify-center gap-5 px-2">
+            <a
+            href=""
+              class="flex flex-col gap-1.5 items-center justify-center bg-[#5c0931] bg-opacity-100 hover:bg-opacity-90 w-5/12 c-md:w-4/12 md:w-3/12 px-2 py-4 md:py-6 rounded-2xl border border-white border-opacity-60 relative"
+            >
+              <div class="flex bg-white p-3.5 md:p-4 rounded-xl">
+                <img src="{{url_for('static', filename='./src/assets/calendar-red.svg')}}" class="h-7 c-md:h-8" alt="" />
+              </div>
+              <div class="flex">
+                <h4 class="ml-1 text-sm sm:text-base font-semibold text-white tracking-wide">
+                  Book Calender
+                </h4>
+              </div>
+          
+            </a>
+
+            <a
+            href=""
+              class="flex flex-col gap-1.5 items-center justify-center bg-[#5c0931] bg-opacity-100 hover:bg-opacity-90 w-5/12 c-md:w-4/12 md:w-3/12 px-2 py-4 md:py-6 rounded-2xl border border-white border-opacity-60 relative"
+            >
+              <div class="flex bg-white p-3.5 md:p-4 rounded-xl">
+                <img src="{{url_for('static', filename='./src/assets/envelope-red.svg')}}" class="h-7 c-md:h-8" alt="" />
+              </div>
+              <div class="flex">
+                <h4 class="ml-1 text-sm sm:text-base font-semibold text-white tracking-wide">Email Us</h4>
+              </div>
+
+            </a>
+          </div>
+
+          <!-- Social Media  -->
+          <div
+            class="flex flex-col gap-2"
+          >
+            <div class="flex">
+              <h4 class="text-base sm:text-lg font-semibold b-color ml-2">Follow Us</h4>
+            </div>
+
+            <!-- socials  -->
+            <div class="flex flex-col gap-2 flex-wrap items-center ">
+              <!-- WA -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-[#25D366]  hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/whatsapp-red.svg')}}" class="h-8" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >WhatsApp</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+              <!-- Arrow  -->
+              <div class="flex items-center mr-2">
+        
+                      <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                      <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                    </span>
+                    </div>
+
+
+              </a>
+
+  
+              <!-- Linkedin -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-[#0A66C2] hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/linkedin.svg')}}" class="h-8" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >Linkedin</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+                   <!-- Arrow  -->
+                   <div class="flex items-center mr-2">
+        
+                    <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                    <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                  </span>
+                  </div>
+
+
+              </a>
+              
+
+              <!-- fb -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-[#1877F2]  hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/facebook.svg')}}" class="h-8" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >Facebook</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+              <!-- Arrow  -->
+              <div class="flex items-center mr-2">
+        
+                      <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                      <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                    </span>
+                    </div>
+
+
+              </a>
+
+              
+              <!-- insta -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-gradient-to-r from-[#FCAF45] via-[#E4405F] to-[#833AB4]  hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/instagram.svg')}}" class="h-8" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >Instagram</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+                  <!-- Arrow  -->
+                  <div class="flex items-center mr-2">
+        
+                    <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                    <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                  </span>
+                  </div>
+
+
+              </a>
+
+              
+              <!-- Youtube -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-[#FF0000]  hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/youtube.svg')}}" class="h-7" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >Youtube</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+                   <!-- Arrow  -->
+                   <div class="flex items-center mr-2">
+        
+                    <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                    <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                  </span>
+                  </div>
+
+
+              </a>
+
+
+              
+              <!-- tiktok -->
+              <a
+              href=""
+                class="flex gap-2 justify-between cursor-pointer bg-black hover:bg-opacity-90 rounded-lg px-2 py-2 w-full"
+              >
+              <div class="flex  gap-2">
+                <div class="flex bg-white p-3.5 rounded-lg w-fit h-fit">
+                  <img src="{{url_for('static', filename='./src/assets/tiktok.svg')}}" class="h-8" alt="" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-white tracking-wide sm:text-base"
+                    >Tik Tok</span
+                  >
+                  <span class="c-text-xs c-md:text-xs font-medium text-stone-100 tracking-tight"
+                    ><strong>2.6K</strong> <span>Followers</span></span
+                  >
+                </div>
+              </div>
+
+
+                  <!-- Arrow  -->
+                  <div class="flex items-center mr-2">
+        
+                    <span class=" h-10 w-10 flex items-center justify-center rounded-full ">
+                    <img src="{{url_for('static', filename='./src/assets/right-angle.svg')}}" alt="" class=" flex w-6">
+                  </span>
+                  </div>
+
+
+              </a>
+            
+       
+
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      function showTab(index, tabId, selectedBtn) {
+        // Hide the default global data when any tab is activated
+        const deafultContent = document.getElementById("deafultContent");
+        if (deafultContent) {
+          deafultContent.classList.add("hidden");
+        }
+
+        document.getElementById("jobSeekerTab").classList.add("hidden");
+        document.getElementById("businessTab").classList.add("hidden");
+
+        document.getElementById(tabId).classList.remove("hidden");
+
+        const sliderBg = document.querySelector(".slider-bg");
+
+        // Reverse the direction of translateX since slider is anchored to the right
+        sliderBg.style.transform = `translateX(${(index - 1) * 100}%)`;
+
+        // Reset all buttons to their default text color
+        const buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach((button) => {
+          button.classList.remove("m-color");
+          button.classList.add("text-white");
+        });
+        selectedBtn.classList.add("m-color");
+        selectedBtn.classList.remove("text-white");
+      }
+
+      // services animation
+      function toggleContent(element, event) {
+        event.stopPropagation();
+        document.querySelectorAll(".group").forEach((card) => {
+          if (card !== element) {
+            card.classList.remove("active");
+          }
+        });
+        element.classList.toggle("active");
+      }
+      document.addEventListener("click", (event) => {
+        document.querySelectorAll(".group").forEach((card) => {
+          if (!card.contains(event.target)) {
+            card.classList.remove("active");
+          }
+        });
+      });
+
+      // country filter
+      const selectedCountry = document.querySelector("#selected-country");
+      const countryList = document.querySelector("#country-list");
+      const countryItems = document.querySelectorAll("#country-list > div");
+
+      // Toggle the country list on click
+      document
+        .querySelector(".countries-dropdown")
+        .addEventListener("click", () => {
+          countryList.classList.toggle("hidden");
+        });
+
+      // swipper
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
+{% endblock %}

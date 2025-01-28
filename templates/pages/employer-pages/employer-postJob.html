@@ -1,0 +1,557 @@
+{% extends "employee_pages_base.html" %}
+{% block title %} Employer - Post Jobs {% endblock %}
+{% block body %}
+
+    <!-- -->
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+
+            <div class="">
+                <h3
+                  class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+                >
+                 Post a Job
+                </h3>
+              </div>
+
+                  <!-- my job banner numbers -->
+                  <div class="flex">
+
+                    
+                    <!-- Banner -->
+                    <div
+                      class="flex gap-1 justify-between w-full bg-[#5c0931] hover:bg-opacity-95 px-2 py-2.5 rounded-xl shadow-sm shadow-black/40 text-white"
+                    >
+
+                    <!-- Available Job Posts -->
+                    <div class="flex flex-col items-center">
+                        <span class="c-text-xs text-stone-300 font-medium tracking-tight">Available Job Posts</span>
+                        <h4 class="text-xl font-bold tracking-wide">5</h4>
+                    </div>
+
+                    <!-- Consumed Job Posts -->
+                    <div class="flex flex-col items-center">
+                        <span class="c-text-xs text-stone-300 font-medium tracking-tight">Consumed Job Posts</span>
+                        <h4 class="text-xl font-bold tracking-wide">4</h4>
+                    </div>
+
+                    <!-- Assigned Package -->
+                    <div class="flex flex-col items-center">
+                        <span class="c-text-xs tracking-tight font-medium text-stone-300">Assigned Package </span>
+                        <h4 class="text-sm font-semibold tracking-wide">Platinum</h4>
+                        <a
+                        href=""
+                        class="flex px-3 sm:px-4 py-0.5 bg-green-600 hover:bg-white hover:border hover:border-green-600 hover:text-green-600 text-white c-text-xs rounded-full w-fit h-fit"
+                        >Buy New</a
+                      >
+                    </div>
+                     
+                    </div>
+
+                 </div>
+
+          <!-- Post a Job  -->
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 bg-white px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+          >
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+              <!-- User -->
+              <div
+                class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+                  <!-- username  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="username"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Username</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="username"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="abc@pjp"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Job Title  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="job_title"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Job Title</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="job_title"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Jobs in Qatar"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Slug  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="slug"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Slug</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="slug"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder=""
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Company  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="company"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Company</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="company"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Confidential"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Salary (QAR) -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="salary"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Salary (QAR)</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="salary"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Negotiable"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- IS Featured job? -->
+                  <div class="flex flex-col gap-1">
+                    <span class="font-medium text-xs sm:text-sm pl-2">
+                      Is it a Featured job?</span
+                    >
+                    <!--  -->
+                    <div class="flex gap-1 items-center pl-2">
+                      <input
+                        required
+                        name=""
+                        id="isFeatured"
+                        type="checkbox"
+                        class="c-accent flex"
+                        placeholder=""
+                      />
+                      <label for="isFeatured" class="flex text-sm">Yes</label>
+                    </div>
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Posting Date -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="posting_date"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Posting Date</label
+                    >
+                    <input
+                      required
+                      name=""
+                      id="posting_date"
+                      type="date"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="select date"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Country  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="country"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Country</label
+                    >
+                    <select
+                      required
+                      name=""
+                      id="country"
+                      class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                    >
+                      <option value="" disabled selected>Country</option>
+                      <option value="Qatar">Qatar</option>
+                      <option value="pakistan">Pakistan</option>
+                    </select>
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Cities  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="cities"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Cities</label
+                    >
+                    <select
+                      required
+                      name=""
+                      id="cities"
+                      class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                    >
+                      <option value="" disabled selected>Cities</option>
+                      <option value="Doha">Doha</option>
+                      <option value="Dukhan">Dukhan</option>
+                      <option value="Al_Wakrah">Al Wakrah</option>
+                      <option value="Lusail">
+                        Lusail
+                      </option>
+                      <option value="Ras_Laffan">Ras Laffan</option>
+                    </select>
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  <!-- Job Type -->
+                  <div class="flex flex-col gap-2">
+                    <span class="font-medium text-xs sm:text-sm pl-2">
+                      Job Type</span
+                    >
+                    <!-- options -->
+                     <div class="flex flex-col gap-1 pl-2">
+
+                    <div class="flex gap-1 items-center">
+                      <input
+                        type="radio"
+                        id="full-time"
+                        name="employmentType"
+                        value="full-time"
+                        class="c-accent flex"
+                        required
+                      />
+                      <label for="full-time" class="text-sm">Full-time</label>
+                    </div>
+
+                    <div class="flex gap-1 items-center">
+                      <input
+                        type="radio"
+                        id="part-time"
+                        name="employmentType"
+                        value="part-time"
+                        class="c-accent flex"
+                        required
+                      />
+                      <label for="part-time" class="text-sm">Part-time</label>
+                    </div>
+
+                    <div class="flex gap-1 items-center">
+                      <input
+                        type="radio"
+                        id="Freelance"
+                        name="employmentType"
+                        value="Freelance"
+                        class="c-accent flex"
+                        required
+                      />
+                      <label for="Freelance" class="text-sm">Freelance</label>
+                    </div>
+
+                    <div class="flex gap-1 items-center">
+                      <input
+                        type="radio"
+                        id="Contract"
+                        name="employmentType"
+                        value="Contract"
+                        class="c-accent flex"
+                        required
+                      />
+                      <label for="Contract" class="text-sm">Contract</label>
+                    </div>
+
+                </div>
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+
+                    <!-- Department  -->
+                    <div class="flex flex-col gap-0.5">
+                        <label
+                        for="department"
+                        class="font-medium text-xs sm:text-sm pl-2"
+                      >
+                      Department</label
+                      >
+                        <select
+                          required
+                          name=""
+                          id="department"
+                          class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                        >
+                          <option value="" disabled selected>
+                            Select Department
+                          </option>
+                          <option value="admin">Admin Jobs</option>
+                    <option value="businessDevlopment">
+                      Business Development Jobs
+                    </option>
+                    <option value="eng">Engineering Jobs</option>
+                    <option value="financeAndBanking">
+                      Finance and Banking Jobs
+                    </option>
+                    <option value="hr">HR Jobs</option>
+                    <option value="hse">HSE Jobs</option>
+                    <option value="healthCare">Health Care Jobs</option>
+                    <option value="IT">IT Jobs</option>
+                    <option value="marketing">Marketing Jobs</option>
+                    <option value="operation">Operations Jobs</option>
+                    <option value="otherDep">Other Department</option>
+                    <option value="procurement">Procurement Jobs</option>
+                    <option value="qaQc">QA/QC Jobs</option>
+                    <option value="salesAndMark">Sales & Marketing Jobs</option>
+                    <option value="skilledWorker">Skilled Worker Jobs</option>
+                    <option value="supplyChain">Supply Chain Jobs</option>
+                        </select>
+                        
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                      </div>
+
+
+                      
+                  <!-- Email  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                    for="email"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                  Email (Optional)</label
+                  >
+                    <input
+                      type="email"
+                      id="email"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Enter Your Email"
+                    />
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+                  
+                  <!-- Website-link  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                      for="linkedin"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Website Link (Optional)</label
+                    >
+                    <input
+                      type="url"
+                      id="linkedin"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Provide the url"
+                    />
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+
+                         
+                  <!-- Whatsapp  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label
+                    for="whatsapp"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                  Whatsapp</label
+                  >
+                    <input
+                      type="text"
+                      id="whatsapp"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="971456789101"
+                    />
+
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3"
+                      >Error here</span
+                    >
+                  </div>
+
+
+
+
+
+                     <!-- Industry  -->
+                     <div class="flex flex-col gap-0.5">
+                        <label
+                        for="industry"
+                        class="font-medium text-xs sm:text-sm pl-2"
+                      >
+                      Industry</label
+                      >
+                        <select
+                          required
+                          name=""
+                          id="industry"
+                          class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                        >
+                          <option value="" disabled selected>
+                            Select Industry
+                          </option>
+                          <option value="advertisementAgency">
+                            Advertisement Agency Jobs
+                          </option>
+                          <option value="airline">Airline Jobs</option>
+                          <option value="automotive">Automotive Jobs</option>
+                          <option value="construction">Construction Jobs</option>
+                          <option value="consultancy">Consultancy Jobs</option>
+                          <option value="deliveryService">
+                            Delivery Service Jobs
+                          </option>
+                          <option value="ecom">Ecommerce Jobs</option>
+                          <option value="educationInst">
+                            Education/Institute Jobs
+                          </option>
+                          <option value="energySector">Energy Sector Jobs</option>
+                          <option value="fashionAndBeauty">
+                            Fashion and Beauty Jobs
+                          </option>
+                          <option value="FMCG">FMCG Jobs</option>
+                          <option value="freelance">Freelance Jobs</option>
+                          <option value="GeneralTrading">General Trading Jobs</option>
+      
+                          <option value="hospital">Hospital/Pharmacy Jobs</option>
+                          <option value="hotel">Hotel/Resort Jobs</option>
+                          <option value="household">Household Jobs</option>
+                          <option value="legalServices">Legal Services Jobs</option>
+                          <option value="manufacturing">
+                            Manufacturing Industry Jobs
+                          </option>
+      
+                          <option value="mediaAndNews">Media and News Jobs</option>
+                          <option value="oilAndGas">Oil and Gas Jobs</option>
+                          <option value="pharma">Pharma Jobs</option>
+                          <option value="printingAndPacking">
+                            Printing and Packaging Jobs
+                          </option>
+                          <option value="realEstate">Real Estate Jobs</option>
+                          <option value="retail">Retail/Shoping Center Jobs</option>
+                          <option value="Recruitment">Recruitment Jobs</option>
+                          <option value="Restaurant">Restaurant Jobs</option>
+                          <option value="softwareHouse">Software House Jobs</option>
+                          <option value="sportsAndLeisure">
+                            Sports and Leisure Jobs
+                          </option>
+                          <option value="telecom">Telecom Jobs</option>
+                          <option value="textile">Textile Jobs</option>
+                          <option value="otherIndustry">Other Industry</option>
+                        </select>
+                        
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                      </div>
+
+
+
+                  <!-- Job Description  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="job_description" class="font-medium text-xs sm:text-sm pl-2">
+                      Job Description</label
+                    >
+                    <textarea
+                      required
+                      rows="5"
+                      name=""
+                      id="job_description"
+                      class="border w-full rounded-lg text-xs px-2 py-3 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Write Job Description Here"
+                    >
+</textarea
+                    >
+
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              <!-- submit button  -->
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+              >
+               Post Job
+              </button>
+
+              
+            </div>
+          </form>
+        </div>
+      </main>
+
+
+   
+
+{% endblock %}

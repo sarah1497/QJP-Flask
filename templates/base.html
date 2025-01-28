@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='./src/styles/output.css')}}" />
+    <title>{% block title %} {% endblock %} | Qatar Jobs Portal</title>
+  </head>
+  <body>
+    <header class="w-full flex justify-center">
+      <div
+        class="fixed top-0 w-full head-foot-width z-50 h-12 b-bg-color text-white border-b-4 border-white backdrop:flex flex-col gap-2 px-2 py-1 md:px-10"
+      >
+        <div class="flex justify-between items-center h-full">
+          <a href="./" class="flex flex-shrink-0">
+            <img src="{{url_for('static', filename='./src/assets/qjp-logo.webp')}}" alt="qjs logo" class="w-28" />
+          </a>
+
+          <!-- tab button & flags  -->
+          <div class="flex items-center gap-1">
+            <!-- Tabs Button  -->
+            <div class="flex justify-start">
+              <div
+                class="border h-7 lg:h-8 rounded-full flex transition-all duration-300 relative overflow-hidden"
+              >
+                <!-- slider  -->
+                <div
+                  class="px-2 sm:px-4 py-1 slider-bg absolute top-0 left-0 w-1/2 h-full bg-white bg-opacity-95 c-border rounded-full z-0 transition-transform duration-300 ease-in-out"
+                ></div>
+                <button
+                  id="jobSeekerTabBtn"
+                  onclick="showTab(0, 'jobSeekerTab', this)"
+                  class="tab-btn font-medium text-xs sm:text-sm lg:text-lg w-20 sm:w-32 lg:w-32 rounded-full transition-transform duration-300 ease-in-out transform overflow-hidden scale-100 hover:scale-1 m-color"
+                >
+                  JobSeeker
+                </button>
+                <button
+                  id="businessTabBtn"
+                  onclick="showTab(1, 'businessTab', this)"
+                  class="tab-btn font-medium text-xs sm:text-sm lg:text-lg w-20 sm:w-32 lg:w-32 rounded-full transition-transform duration-300 ease-in-out transform overflow-hidden scale-100 hover:scale-105 text-white"
+                >
+                  Business
+                </button>
+              </div>
+            </div>
+
+            <!-- flag  -->
+            <div class="relative w-14">
+              <div
+                class="countries-dropdown flex justify-end rounded-md cursor-pointer"
+              >
+                <picture id="selected-country">
+                  <img src="{{url_for('static', filename='./src/assets/qa.svg')}}" alt="" class="w-10 md:w-12" />
+                </picture>
+              </div>
+              <div
+                id="country-list"
+                class="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden"
+              >
+                <a href="">
+                  <div
+                    class="px-2 py-2 hover:bg-gray-100 cursor-pointer border-b"
+                  >
+                    <div class="flex">
+                      <img src="{{url_for('static', filename='./src/assets/qa.svg')}}" alt="" class="w-7 md:w-12" />
+                    </div>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer">
+                    <div class="flex">
+                      <img src="{{url_for('static', filename='./src/assets/pk.svg')}}" alt="" class="w-7 md:w-12" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</header>
+
+{% block body %} {% endblock %}
+
+<footer class="px-0 w-full flex justify-center">
+  <div
+    class="h-12 fixed bottom-0 z-50 flex gap-2 text-white items-center justify-between w-full head-foot-width px-4 md:px-10 py-1 bg-[#5c0931] bg-opacity-90 "
+  >
+    <a href="{{url_for('find_job')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/job.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Find Job</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('professional_resume')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/cv.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm  text-white tracking-tight footer-leading"
+          >Pro CV</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('feature_profile')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/becomeFeature.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Become Feature</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('register_profile')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/register.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Register</span
+        >
+      </div>
+    </a>
+  </div>
+
+        <!-- WhatsApp icon  -->
+        <div
+        class="fixed bottom-14 right-2 bg-slate-400 flex items-center hover:bg-green-500 h-7 w-28 md:h-9 md:w-36 rounded-full z-20 opacity-90"
+      >
+        <a href="" class="flex w-full">
+          <div class="flex justify-between items-center w-full">
+            <div class="ml-2 md:ml-3  flex w-full">
+              <span
+                class="flex font-medium text-white tracking-tight c-text-xxs md:!text-xs break-keep wa-text top-2 md:top-2.5"
+                >Join Whatsapp</span
+              >
+              <span
+                class="flex font-medium text-white tracking-tight c-text-xxs md:!text-xs break-keep wa-text top-2 md:top-2.5"
+                >For Job Alerts</span
+              >
+            </div>
+
+            <div
+              class="flex justify-end bg-green-400 hover:bg-green-500 rounded-full ml-auto h-8 md:h-10 md:px-2.5 px-2 whatsapp-btn"
+            >
+              <img
+                src="{{url_for('static', filename='./src/assets/whatsapp.svg')}}"
+                class="w-6 md:w-8 flex whatsapp-btn"
+                alt=""
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+    </footer>
+    
+  </div>
+
+
+<!-- JobSeeker tab  -->
+<div
+id="jobSeekerTab"
+class="hidden md:w-full flex md:items-center flex-col"
+>
+<main class="main !mt-14 !mb-14">
+  <!-- body  -->
+  <div class="flex flex-col gap-4 rounded-xl">
+    <!-- find talent  -->
+    <a href="{{url_for('feature_profile')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/jobseeker.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 md:text-xl growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              Feature your profile
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Showcase Your Profile, Get Noticed.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Get a Professional Resume  -->
+    <a href="{{url_for('professional_resume')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/business.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              Get a Professional Resume
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Your Dream Job Starts with a Perfect Resume.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer class="px-0 w-full flex justify-center">
+  <div
+    class="h-12 fixed bottom-0 z-50 flex gap-2 text-white items-center justify-between w-full head-foot-width px-4 md:px-10 py-1 bg-[#5c0931] bg-opacity-90"
+  >
+    <a href="{{url_for('find_job')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/job.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Find Job</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('professional_resume')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/cv.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Pro CV</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('feature_profile')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img
+          src="{{url_for('static', filename='./src/assets/becomeFeature.svg')}}"
+          alt=""
+          class="h-4 md:h-5"
+        />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Become Feature</span
+        >
+      </div>
+    </a>
+
+    <a href="{{url_for('register_profile')}}" class="flex">
+      <div class="flex flex-col items-center gap-1 md:gap-1.5">
+        <img src="{{url_for('static', filename='./src/assets/register.svg')}}" alt="" class="h-4 md:h-5" />
+        <span
+          class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+          >Register</span
+        >
+      </div>
+    </a>
+  </div>
+</footer>
+</div>
+
+<!-- Business tab  -->
+<div
+id="businessTab"
+class="hidden md:w-full flex md:items-center flex-col"
+>
+<main class="main !mt-14 !mb-14">
+  <!-- body  -->
+  <div class="flex flex-col gap-4 rounded-xl">
+    <!-- find talent  -->
+    <a href="{{url_for('find_talent')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/find-talent.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              Find Talent
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Hire smarter, Find top talent.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Post a Job  -->
+    <a href="{{url_for('post_job')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/post-job.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              Post a Job
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Reach top talent instantly.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!--  Business Adevertisng   -->
+    <a href="{{url_for('advertise_business')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/advertise-business.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              Business Adevertisng
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Your brand, everywhere it matters.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!--  HR Outsourcing   -->
+    <a href="{{url_for('hr_outsourcing')}}" class="">
+      <div
+        class="flex flex-col h-[300px] c-md:h-[350px] md:h-[390px] group bg-[#5c0931] hover:bg-[#6e0839] rounded-2xl overflow-hidden relative"
+      >
+        <!-- image section  -->
+        <div
+          class="relative w-full h-[200px] c-md:h-[240px] md:h-[270px] rounded-t-2xl"
+        >
+          <img
+            src="{{url_for('static', filename='./src/assets/hr-outsource.webp')}}"
+            class="w-full h-full object-cover object-center transition-transform duration-500"
+            alt="jobseeker"
+          />
+        </div>
+
+        <!-- text section  -->
+        <div
+          class="flex border-t-8 border-gray-300 group-hover:border-white relative"
+        >
+          <!-- spinner  -->
+          <div
+            class="absolute -top-12 left-[calc(80%-40px)] flex items-center"
+          >
+            <span
+              class="h-20 w-20 flex items-center justify-center rounded-full border-8 border-white"
+            >
+              <circle
+                class="absolute h-16 w-16 growing-btn animate-growing-btn flex items-center justify-center rounded-full"
+              ></circle>
+
+              <span
+                class="absolute h-12 w-12 flex items-center justify-center rounded-full bg-white"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/right-angle-red.svg')}}"
+                  alt=""
+                  class="flex w-6"
+                />
+              </span>
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-1 px-4 py-2 mt-4">
+            <h2 class="text-white text-lg md:text-xl font-semibold">
+              HR Outsourcing
+            </h2>
+
+            <span class="text-stone-100 text-sm md:text-base"
+              >Outsource HR, optimize efficiency.</span
+            >
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer class="px-0 w-full flex justify-center">
+  <div
+    class="h-12 fixed bottom-0 z-50 flex gap-2 text-white items-center justify-between w-full head-foot-width px-4 md:px-10 py-1 bg-[#5c0931] bg-opacity-90"
+  >
+    <a
+      href="{{url_for('find_talent')}}"
+      class="flex flex-col items-center gap-1 md:gap-1.5"
+    >
+      <img src="{{url_for('static', filename='./src/assets/find-talent.svg')}}" alt="" class="h-4 md:h-5" />
+      <span
+        class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+        >Find Talent</span
+      >
+    </a>
+
+    <a
+      href="{{url_for('post_job')}}"
+      class="flex flex-col items-center gap-1 md:gap-1.5"
+    >
+      <img src="{{url_for('static', filename='./src/assets/post-job.svg')}}" alt="" class="h-4 md:h-5" />
+      <span
+        class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+        >Post Job</span
+      >
+    </a>
+
+    <a
+      href="{{url_for('advertise_business')}}"
+      class="flex flex-col items-center gap-1 md:gap-1.5"
+    >
+      <img src="{{url_for('static', filename='./src/assets/business-ads.svg')}}" alt="" class="h-4 md:h-5" />
+      <span
+        class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+        >Business Ads</span
+      >
+    </a>
+
+    <a
+      href="{{url_for('contact_us')}}"
+      class="flex flex-col items-center gap-1 md:gap-1.5"
+    >
+      <img src="{{url_for('static', filename='./src/assets/contact-us.svg')}}" alt="" class="h-4 md:h-5" />
+      <span
+        class="font-medium text-xs sm:text-sm text-white tracking-tight footer-leading"
+        >Contact Us</span
+      >
+    </a>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+{% extends "base.html" %}
+{% block title %} HR Outsourcing {% endblock %}
+{% block body %}
+
+    <!-- deafultContent tab  -->
+    <div id="deafultContent" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- Advertisement Swiper -->
+        <div class="swiper adSwiper w-full">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center"
+            >
+              <img
+                src="{{url_for('static', filename='./src/assets/advertise-business.webp')}}"
+                class="w-full h-full object-cover rounded-xl"
+                alt=""
+              />
+            </div>
+            <div
+              class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center"
+            >
+              <img
+                src="{{url_for('static', filename='./src/assets/find-talent.webp')}}"
+                class="w-full h-full object-cover rounded-xl"
+                alt=""
+              />
+            </div>
+            <div
+              class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center"
+            >
+              <img
+                src="{{url_for('static', filename='./src/assets/business.webp')}}"
+                class="w-full h-full object-cover rounded-xl"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-scrollbar b-color"></div>
+        </div>
+
+        <!-- head  -->
+        <div class="flex flex-col gap-4">
+          <div class="flex">
+            <h4 class="text-base md:text-lg font-semibold m-color">
+              Outsourcing HR with Qatar Jobs Portal
+            </h4>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <h4 class="text-sm font-semibold text-black">
+              Start HR Outsourcing here
+            </h4>
+            <span class="text-sm text-stone-800 tracking-tight">
+              Outsource your HR management limited to job posting, shortlisting
+              and interviews by opting for services offered by Qatar Jobs
+              Portal.
+            </span>
+          </div>
+        </div>
+
+        <!-- tabs  -->
+        <div
+          class="flex sm:justify-center gap-7 py-4 px-1.5 button-slider overflow-hidden pl-2"
+        >
+          <!-- HR Coordinator  -->
+          <div
+            class="flex flex-shrink-0 c-bg-color flex-col gap-0.5 items-center justify-center rounded-xl h-48 w-36 hover shadow-sm shadow-black/10 text-white cursor-pointer relative"
+            id="hrCoordinatorPkg-tab"
+            onclick="showAdvertTab('hrCoordinatorPkg', this)"
+          >
+            <!-- bg image  -->
+            <img
+              src="{{url_for('static', filename='./src/assets/tab-card-bg.webp')}}"
+              alt=""
+              class="w-full h-full object-cover object-top rounded-xl"
+            />
+
+            <img
+              src="{{url_for('static', filename='./src/assets/hr-coordinator.svg')}}"
+              class="h-9 absolute top-8"
+              alt=""
+            />
+
+            <div class="flex absolute bottom-16">
+              <h4 class="text-xl font-bold px-2 leading-5">HR Coordinator</h4>
+            </div>
+            <div class="flex absolute bottom-4 px-2">
+              <span class="text-sm font-medium leading-4"
+                >Remote resources for your HR needs</span
+              >
+            </div>
+            <!-- tab Numbers  -->
+            <div class="absolute -left-2 top-4 font-extrabold">
+              <span class="flex text-5xl special">1</span>
+            </div>
+          </div>
+
+          <!--HR Business Partner -->
+          <div
+            class="flex flex-shrink-0 c-bg-color flex-col gap-0.5 items-center justify-center rounded-xl h-48 w-36 hover shadow-sm shadow-black/10 text-white cursor-pointer relative"
+            id="hrBusPartnerPkg-tab"
+            onclick="showAdvertTab('hrBusPartnerPkg', this)"
+          >
+            <!-- bg image  -->
+            <img
+              src="{{url_for('static', filename='./src/assets/tab-card-bg.webp')}}"
+              alt=""
+              class="w-full h-full object-cover object-top rounded-xl"
+            />
+
+            <img
+              src="{{url_for('static', filename='./src/assets/hr-business-partner.svg')}}"
+              class="h-9 absolute top-8"
+              alt=""
+            />
+
+            <div class="flex absolute bottom-16">
+              <h4 class="text-xl font-bold px-2 leading-5">
+                HR Business Partner
+              </h4>
+            </div>
+            <div class="flex absolute bottom-4 px-2">
+              <span class="text-sm font-medium leading-4"
+                >Onsite resource for your daily HR needs</span
+              >
+            </div>
+            <!-- tab Numbers  -->
+            <div class="absolute -left-2 top-4 font-extrabold">
+              <span class="flex text-5xl special">2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- tabs content  -->
+        <div class="flex flex-col gap-1">
+          <!-- HR Coordinator  -->
+          <div id="hrCoordinatorPkg" class="hidden">
+            <div
+              class="flex bg-white flex-col gap-5 px-3 py-4 rounded-xl shadow-sm shadow-black/40 hover:bg-stone-50"
+            >
+              <!-- head  -->
+              <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold m-color">HR Coordinator</h3>
+                <span class="text-stone-800 text-xs sm:text-sm"
+                  >Hire a dedicated <strong>REMOTE</strong> resource to manage
+                  job posts and shortlist and onboard candidates for a single
+                  organization:</span
+                >
+              </div>
+
+              <!-- ul li points  -->
+              <div class="flex flex-col gap-1">
+                <h5 class="text-xs sm:text-sm font-semibold m-color">
+                  Services Include:
+                </h5>
+                <ul class="flex flex-col gap-3">
+                  <li class="flex items-start gap-1 text-sm">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Unlimited Job Posting</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1 text-sm">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Shortlisting Candidates</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Organize Interviews</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1">
+                    <i
+                      class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >9 hours availability (remote)</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- pricing button  -->
+              <div class="flex flex-col gap-1 justify-center items-center">
+                <a
+                  href="#"
+                  class="px-3.5 py-1.5 m-btn text-sm rounded-full h-fit  w-full text-center shadow-sm shadow-black/20"
+                  >Start Now
+                  <span class="font-semibold">2000 QAR/Month</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- HR Business 
+Partner  -->
+          <div id="hrBusPartnerPkg" class="hidden">
+            <div
+              class="flex bg-white flex-col gap-5 px-3 py-4 rounded-xl shadow-sm shadow-black/40 hover:bg-stone-50"
+            >
+              <!-- head  -->
+              <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold m-color">
+                  HR Business Partner
+                </h3>
+                <span class="text-stone-800 text-xs sm:text-sm"
+                  >Hire a dedicated <strong>ONSITE</strong> resource to manage
+                  job posts and shortlist and onboard candidates for a single
+                  organization:</span
+                >
+              </div>
+              <!-- ul li points  -->
+              <div class="flex flex-col gap-1">
+                <h5 class="text-xs sm:text-sm font-semibold m-color">
+                  Services Include:
+                </h5>
+                <ul class="flex flex-col gap-3">
+                  <li class="flex items-start gap-1 text-sm">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Unlimited Job Posting</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1 text-sm">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Shortlisting Candidates</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1">
+                    <i
+                      class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >Organize Interviews</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-1">
+                    <i
+                      class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                    ></i>
+                    <span class="text-stone-800 text-xs sm:text-sm"
+                      >9 hours availability (onsite)</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- pricing button  -->
+              <div class="flex flex-col gap-1 justify-center items-center">
+                <a
+                  href="#"
+                  class="px-3.5 py-1.5 m-btn text-sm rounded-full h-fit w-full text-center shadow-sm shadow-black/20"
+                  >Start Now
+                  <span class="font-semibold">5000 QAR/Month</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- faqs  -->
+        <div class="flex flex-col gap-2">
+          <div class="flex">
+            <h4 class="flex text-base font-medium">
+              Frequently Asked Questions
+            </h4>
+          </div>
+
+          <div class="accordion-item border-y border-white-300 bg-white">
+            <h4
+              class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+            >
+              <span class="text-base text-slate-950"
+                >What is the HR Outsourcing service?</span
+              >
+              <img
+                src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                alt="arrow"
+                class="w-3 arrow transition-transform duration-300"
+              />
+            </h4>
+            <div
+              class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+            >
+              <p class="text-xs text-slate-700">
+                Our HR Outsourcing service provides businesses with professional
+                HR support tailored to their needs. Whether you require
+                assistance managing remote teams or onsite HR personnel, we
+                offer flexible solutions to handle recruitment, payroll,
+                employee management, and more.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item border-b border-gray-300 bg-white">
+            <h4
+              class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+            >
+              <span class="text-base text-slate-950"
+                >How does Remote HR Outsourcing work?</span
+              >
+              <img
+                src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                alt="arrow"
+                class="w-3 arrow transition-transform duration-300"
+              />
+            </h4>
+            <div
+              class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+            >
+              <p class="text-xs text-slate-700">
+                With Remote HR Outsourcing, our team handles your HR functions
+                virtually. This includes tasks such as hiring, payroll
+                processing, compliance, and employee support. It’s ideal for
+                businesses that prioritize flexibility and reduced overhead
+                costs.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item border-b border-gray-300 bg-white">
+            <h4
+              class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+            >
+              <span class="text-base text-slate-950"
+                >What services are included in Onsite HR Outsourcing?</span
+              >
+              <img
+                src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                alt="arrow"
+                class="w-3 arrow transition-transform duration-300"
+              />
+            </h4>
+            <div
+              class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+            >
+              <p class="text-xs text-slate-700">
+                Our Onsite HR Outsourcing includes assigning an HR professional
+                to work at your location. They manage daily HR operations,
+                employee relations, compliance, and other needs, ensuring
+                seamless integration with your team.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item border-b border-gray-300 bg-white">
+            <h4
+              class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+            >
+              <span class="text-base text-slate-950"
+                >How do I determine which package is right for my
+                business?</span
+              >
+              <img
+                src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                alt="arrow"
+                class="w-3 arrow transition-transform duration-300"
+              />
+            </h4>
+            <div
+              class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+            >
+              <p class="text-xs text-slate-700">
+                If you require flexible, virtual support with no need for a
+                physical presence, the Remote package is ideal. For businesses
+                needing hands-on HR assistance and in-office presence, the
+                Onsite package is the better choice. We can help evaluate your
+                needs and recommend the best option.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a65c1abfe9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // advertise tab
+      function showAdvertTab(tabId, selectedBtn) {
+        // Hide all tab contents explicitly
+        document.getElementById("hrCoordinatorPkg").classList.add("hidden");
+        document.getElementById("hrBusPartnerPkg").classList.add("hidden");
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.remove("hidden");
+
+        // Reset all buttons explicitly
+        document
+          .getElementById("hrCoordinatorPkg-tab")
+          .classList.remove("advertActiveTab");
+        document
+          .getElementById("hrBusPartnerPkg-tab")
+          .classList.remove("advertActiveTab");
+
+        // Center the clicked tab in the view
+        const container = document.querySelector(".button-slider"); // Parent container
+        const elementOffset = selectedBtn.offsetLeft; // Distance of tab from container's left edge
+        const elementWidth = selectedBtn.offsetWidth; // Width of the clicked tab
+        const containerWidth = container.offsetWidth; // Visible width of the container
+
+        // Calculate the scroll position to center the tab
+        const scrollPosition =
+          elementOffset - containerWidth / 2 + elementWidth / 2;
+
+        // Scroll the container to the calculated position
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth", // Smooth scrolling effect
+        });
+
+        // Set active state for the selected button
+        selectedBtn.classList.add("advertActiveTab");
+      }
+
+      function showTab(index, tabId, selectedBtn) {
+        // Hide the default global data when any tab is activated
+        const deafultContent = document.getElementById("deafultContent");
+        if (deafultContent) {
+          deafultContent.classList.add("hidden");
+        }
+
+        document.getElementById("jobSeekerTab").classList.add("hidden");
+        document.getElementById("businessTab").classList.add("hidden");
+
+        document.getElementById(tabId).classList.remove("hidden");
+
+        // Move the slider
+        const sliderBg = document.querySelector(".slider-bg");
+        // Reverse the direction of translateX since slider is anchored to the right
+        sliderBg.style.transform = `translateX(${(index - 1) * 100}%)`;
+
+        // Reset all buttons to their default text color
+        const buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach((button) => {
+          button.classList.remove("m-color");
+          button.classList.add("text-white");
+        });
+        selectedBtn.classList.add("m-color");
+        selectedBtn.classList.remove("text-white");
+      }
+
+      // services animation
+      function toggleContent(element, event) {
+        event.stopPropagation();
+        document.querySelectorAll(".group").forEach((card) => {
+          if (card !== element) {
+            card.classList.remove("active");
+          }
+        });
+        element.classList.toggle("active");
+      }
+      document.addEventListener("click", (event) => {
+        document.querySelectorAll(".group").forEach((card) => {
+          if (!card.contains(event.target)) {
+            card.classList.remove("active");
+          }
+        });
+      });
+
+      // country filter
+      const selectedCountry = document.querySelector("#selected-country");
+      const countryList = document.querySelector("#country-list");
+      const countryItems = document.querySelectorAll("#country-list > div");
+
+      // Toggle the country list on click
+      document
+        .querySelector(".countries-dropdown")
+        .addEventListener("click", () => {
+          countryList.classList.toggle("hidden");
+        });
+
+      var adswiper = new Swiper(".adSwiper", {
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+
+      // accordian & its animation
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+    </script>
+{% endblock %}

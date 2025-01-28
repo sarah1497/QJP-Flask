@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='./src/styles/output.css')}}" />
+    <title>Sign In</title>
+  </head>
+  <body class="bg-[#5c0931] min-h-screen flex justify-center">
+     
+     
+     
+      <main class="main flex flex-col gap-3">
+
+        <a href="/"
+        class="h-12 b-bg-color text-white flex justify-center items-center  px-2 py-2"
+      >
+        <img src="{{url_for('static', filename='./src/assets/qjp-logo.webp')}}" alt="qjp logo" class="w-40" />
+      </a>
+
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 px-3 py-4 rounded-xl"
+          >
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+              <!-- Sign In -->
+              
+                <h3 class="text-base sm:text-lg text-white font-semibold pl-1">
+                 Employer Sign In
+                </h3>
+                <div class="flex flex-col gap-3">
+                  <!-- User Name  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                      required
+                      name=""
+                      id="username"
+                      type="email"]
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-white shadow-sm shadow-black/50"
+                      placeholder="Username"
+                    />
+                    <span class=" c-text-xs text-red-600 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+                  <!-- Password  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                      required
+                      name=""
+                      id="pass"
+                      type="password"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] shadow-sm shadow-black/5"
+                      placeholder="Password"
+                    />
+                    <span class=" c-text-xs text-red-600 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                
+                </div>
+
+ 
+              <!-- Sign In  -->
+               <div class="flex flex-col gap-2">
+                
+                <span class=" c-text-xs text-slate-200 sm:text-xs pl-3 flex justify-center">In case of Forget Password, <a href="" class="text-white">Click here</a></span>
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn-white text-base rounded-full shadow-sm shadow-black/15 font-semibold"
+              >
+                Sign In
+              </button>
+
+
+              <!-- page error  -->
+              <div class="flex bg-white px-2 py-4 mt-4 rounded-xl">
+                <div class="flex flex-col gap-1 justify-center w-full">
+                  <span class="text-sm text-red-600 sm:text-xs pl-3 flex justify-center items-center font-medium">ERROR</span>
+                <span class=" c-text-xs text-red-600 sm:text-xs pl-3 flex justify-center items-center">Lorem ipsum dolor sit amet.</span>
+              </div>
+              </div>
+            </div>
+
+            </div>
+
+            
+          </form>
+          
+      </main>
+
+
+  </body>
+</html>

@@ -1,0 +1,300 @@
+{% extends "admin_base.html" %}
+{% block title %} Employer Registration by Admin {% endblock %}
+{% block body %}
+
+    <!-- -->
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+
+                    
+          <div class="">
+            <h3
+              class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+            >
+            Employer Registration
+            </h3>
+          </div>
+
+
+               <!-- profile card  -->
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 bg-white px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+          >
+            <!-- profile pic  -->
+            <div class="flex justify-center">
+              <!-- profile Picture   -->
+              <div class="flex flex-col gap-1 items-center justify-center">
+                <div
+                  class="flex rounded-full border-4 w-24 h-24 justify-center items-center flex-shrink-0"
+                >
+                  <img
+                    id="profileImage"
+                    src="{{url_for('static', filename='./src/assets/user.svg')}}"
+                    class="w-20 h-20 rounded-full object-cover object-top"
+                    alt=""
+                  />
+                </div>
+                <!-- File Input for Upload -->
+                <div class="flex flex-col justify-center items-center">
+                  <div
+                    class="b-bg-h-color flex gap-1 rounded-full pr-2 items-center border border-white"
+                  >
+                    <picture
+                      class="bg-white hover:bg-slate-100 rounded-full border border-white"
+                    >
+                      <img
+                        src="{{url_for('static', filename='./src/assets/upload-photo.svg')}}"
+                        alt=""
+                        class="w-4 m-1"
+                      />
+                    </picture>
+
+                    <label
+                      for="uploadLogo"
+                      class="font-semibold cursor-pointer text-sm text-white"
+                    >
+                      Upload Logo
+                    </label>
+                    <input
+                      id="uploadLogo"
+                      type="file"
+                      accept="image/*"
+                      class="hidden"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+              <!-- personal info  -->
+              <div
+                class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+                  <!-- Name  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                      required
+                      name=""
+                      id="name"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Enter Name here"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                     <!-- Organization Name  -->
+                     <div class="flex flex-col gap-0.5">
+                        <input
+                        required
+                        name=""
+                        id="org_name"
+                        type="text"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                        placeholder="Enter Organization Name"
+                      />
+                      <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                    </div>
+
+
+                    
+                
+
+                  <!-- Contact Number  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                      required
+                      type="text"
+                      id="number"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Enter Your Number"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                  <!-- Email  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                      required
+                      type="email"
+                      id="email"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Enter Your Email"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+                  
+                  <!-- Postal Address  -->
+                  <div class="flex flex-col gap-0.5">
+                    <input
+                    required
+                    name=""
+                    id="postal_address"
+                    type="text"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Postal Address"
+                  />
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                  <!-- Website-link  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="linkedin" class="font-medium text-xs sm:text-sm pl-2">
+                      Website Link (Optional)</label
+                    >
+                    <input
+                      type="url"
+                      id="linkedin"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Provide the url"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+                  <!-- LinkedIn Profile  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="linkedin" class="font-medium text-xs sm:text-sm pl-2">
+                      LinkedIn Profile Link (Optional)</label
+                    >
+                    <input
+                      type="url"
+                      id="linkedin"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Provide the url"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                  <!-- Facebook Profile  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="facebook" class="font-medium text-xs sm:text-sm pl-2">
+                     Facebook Profile Link (Optional)</label
+                    >
+                    <input
+                      type="url"
+                      id="facebook"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Provide the url"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                  <!-- Instagram Profile  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="instagram" class="font-medium text-xs sm:text-sm pl-2">
+                     Instagram Profile Link (Optional)</label
+                    >
+                    <input
+                      type="url"
+                      id="instagram"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Please Provide the url"
+                    />
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+                  
+
+                  <!-- Business Registration Evidence  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="dob" class="font-medium text-xs sm:text-sm pl-2">
+                        Business Registration Evidence  </label
+                    >
+                    <div class="flex border w-full items-center justify-between rounded-full text-xs px-2 py-1.5 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5 bg-white">
+                       <span class="text-stone-400">Upload your Business Registration Document here
+                    </span> 
+                    <input
+                    required
+                    type="file"
+                    id="registraion_evidence"
+                    class="hidden"
+                    placeholder="Please Provide the url"
+                    />
+                    <label for="registraion_evidence" class="flex m-btn px-4 py-2.5 rounded-full font-medium flex-shrink-0">Upload files</label>
+
+
+                    </div>
+                    
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <!-- submit button  -->
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+              >
+                Register
+              </button>
+
+
+                   <!-- Business id & Registration Date  -->
+                   <div class="flex px-4 items-center justify-between">
+                    <!-- ID  -->
+                    <span class="c-text-sm text-stone-700 tracking-tight"
+                      >Business ID: <span class="text-stone-800">435366</span>
+                    </span>
+                    <span class="c-text-sm text-stone-700 tracking-tight"
+                      >Date of Registration: <span class="text-stone-800">12/12/2024</span>
+                    </span>
+                    
+                  </div>
+
+
+            </div>
+
+            
+          </form>
+        </div>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        // image upload
+        const uploadLogo = document.getElementById("uploadLogo");
+        const profileImage = document.getElementById("profileImage");
+  
+        // Handle image preview
+        uploadLogo.addEventListener("change", (event) => {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => (profileImage.src = e.target.result);
+            reader.readAsDataURL(file);
+          }
+        });
+  
+        
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menuBtn.classList.toggle('active');
+        });
+        
+  
+      </script>
+      
+ {% endblock %}

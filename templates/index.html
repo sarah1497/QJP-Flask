@@ -1,0 +1,451 @@
+<!-- 
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block body %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='./src/styles/output.css')}}" />
+
+     <title>Qatar Jobs Portal</title>
+  </head>
+  <body>
+    <header class="fixed top-0 w-full z-50 head-foot-width">
+
+      <div
+        class="h-12 b-bg-color text-white flex justify-center items-center border-b-4 border-white px-2 py-2"
+      >
+        <img src="{{url_for('static', filename='./src/assets/qjp-logo.webp')}}" alt="qjp logo" class="w-32" />
+      </div>
+
+      <div
+        id="alert-box"
+        class="bg-red-700 opacity-90 text-white relative h-7 text-sm flex items-center justify-between px-3"
+        role="alert"
+      >
+      
+        <span href="" class="text-xs tracking-tight  leading-3 gap-0.5"
+          >Updated <a href="{{url_for('admin_home')}}" class="underline text-green-800 text-xs pl-1 font-medium">Admin</a>    
+          <a href="{{url_for('employer_home')}}" class="underline text-blue-800 text-xs pl-2 font-medium">Employer</a> </span
+        >
+        <picture class="remove-svg">
+          <svg
+            class="fill-current h-6 w-6 text-white"
+            role="button"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <title>Close</title>
+            <path
+              d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+            />
+          </svg>
+        </picture>
+      </div>
+    </header>
+
+    <main class="main !mt-20">
+      
+      <!-- head  -->
+      <div class="flex justify-end items-center gap-1">
+        <div class="flex">
+          <span class="font-semibold md:text-lg">Choose Country: </span>
+        </div>
+            <!-- flag  -->
+            <div class="relative w-14">
+              <div
+                class="countries-dropdown flex justify-end rounded-md cursor-pointer"
+              >
+                <picture id="selected-country">
+                  <img src="{{url_for('static', filename='./src/assets/qa.svg')}}" alt="" class="w-10 md:w-12" />
+                </picture>
+              </div>
+              <div
+                id="country-list"
+                class="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden"
+              >
+                <a href="">
+                  <div
+                    class="px-2 py-2 hover:bg-gray-100 cursor-pointer border-b"
+                  >
+                    <div class="flex">
+                      <img src="{{url_for('static', filename='./src/assets/qa.svg')}}" alt="" class="w-7 md:w-12" />
+                    </div>
+                  </div>
+                </a>
+                <a href="">
+                  <div class="px-2 py-2 hover:bg-gray-100 cursor-pointer">
+                    <div class="flex">
+                      <img src="{{url_for('static', filename='./src/assets/pk.svg')}}" alt="" class="w-7 md:w-12" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- body  -->
+      <div class="flex flex-col gap-4 rounded-xl">
+        <div class="relative overflow-hidden group rounded-xl shadow-lg">
+          <!-- Image Section -->
+          <div class="relative w-full h-60 c-md:h-80">
+            <img
+              src="{{url_for('static', filename='./src/assets/For Jobseekers.webp')}}"
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 group.active:scale-105"
+              alt="jobseeker"
+            />
+          </div>
+
+          <!-- Overlay Section -->
+          <div
+            class="absolute bottom-0 right-0 w-full h-10 bg-[#5c0931] bg-opacity-50 rounded-b-xl flex items-center justify-center transition-all duration-500 group-hover:h-36 group-hover:bg-opacity-50 group.active:h-36 group.active:bg-opacity-50"
+          >
+            <h2
+              id=""
+              class="text-white text-lg md:text-xl font-medium absolute bottom-2 right-5 transition-all duration-500 group-hover:bottom-28 group-hover:opacity-100 group.active:bottom-28 group.active:opacity-100"
+            >
+              For Jobseeker
+            </h2>
+
+            <!-- Hidden Content -->
+            <div
+              class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 group.active:opacity-100"
+            >
+              <a
+                href="{{url_for('find_job')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-20 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Find Job
+              </a>
+              <a
+                href="{{url_for('register_profile')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-14 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Register as Candidate
+              </a>
+              <a
+                href="{{url_for('feature_profile')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-8 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Feature your profile
+              </a>
+              <a
+                href="{{url_for('professional_resume')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-2 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Get a Professional Resume
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden group rounded-xl shadow-lg">
+          <!-- Image Section -->
+          <div class="relative w-full h-60 c-md:h-80 ">
+            <img
+              src="{{url_for('static', filename='./src/assets/For Business.webp')}}"
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 group.active:scale-105"
+              alt="jobseeker"
+            />
+          </div>
+
+          <!-- Overlay Section -->
+          <div
+            class="absolute bottom-0 right-0 w-full h-10 bg-[#5c0931] bg-opacity-50 rounded-b-xl flex items-center justify-center transition-all duration-500 group-hover:h-36 group-hover:bg-opacity-50 group.active:h-36 group.active:bg-opacity-50"
+          >
+            <h2
+              id=""
+              class="toggleSeeker text-white text-lg md:text-xl font-medium absolute bottom-2 right-5 transition-all duration-500 group-hover:bottom-28 group-hover:opacity-100 group.active:bottom-28 group.active:opacity-100"
+            >
+              For Business
+            </h2>
+
+            <!-- Hidden Content -->
+            <div
+              class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 group.active:opacity-100"
+            >
+              <a
+                href="{{url_for('find_talent')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-20 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Find Talent
+              </a>
+              <a
+                href="{{url_for('post_job')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-14 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Post a Job
+              </a>
+              <a
+                href="{{url_for('advertise_business')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-8 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                Business Advertisement
+              </a>
+              <a
+                href="{{url_for('hr_outsourcing')}}"
+                class="text-white text-base md:text-lg absolute bottom-[-40px] group-hover:bottom-2 opacity-0 group-hover:opacity-100 transition-all duration-300 right-5 c-h-underline"
+              >
+                HR Outsourcing
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-white w-full flex flex-col gap-3 mt-auto px-4 pt-4 rounded-t-xl pb-2 head-foot-width"
+    >
+      <div class="flex flex-col gap-2">
+        <div class="accordion-item border-y border-gray-300">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-slate-600">For JobSeeker</span>
+            <img
+              src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+              alt="arrow"
+              class="w-3 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href="{{url_for('find_job')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Find Job</a
+            >
+            <a
+              href="{{url_for('register_profile')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Register as JobSeeker</a
+            >
+            <a
+              href="{{url_for('feature_profile')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Feature Your Profile</a
+            >
+            <a
+              href="{{url_for('professional_resume')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Get a Professional Resume</a
+            >
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-slate-600">For Employer</span>
+            <img
+              src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+              alt="arrow"
+              class="w-3 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href="{{url_for('find_talent')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Find Talent</a
+            >
+            <a
+              href="{{url_for('post_job')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Post a Job</a
+            >
+            <a
+              href="{{url_for('advertise_business')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Business Advertising</a
+            >
+            <a
+              href="{{url_for('hr_outsourcing')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >HR Outsourcing</a
+            >
+            <a
+              href="{{url_for('employer_sign_in')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Employer Sign In</a
+            >
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-slate-600">Policy Pages</span>
+            <img
+              src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+              alt="arrow"
+              class="w-3 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a href="{{url_for('refund_policy')}}" class="text-sm md:text-base c-underline text-slate-700">
+              Refund Policy
+            </a>
+            <a href="{{url_for('terms_condition')}}" class="text-sm md:text-base c-underline text-slate-700"
+              >Terms & Condition</a
+            >
+            <a href="{{url_for('privacy_policy')}}" class="text-sm md:text-base c-underline text-slate-700"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-slate-600">Other</span>
+            <img
+              src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+              alt="arrow"
+              class="w-3 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href="{{url_for('contact_us')}}"
+              class="text-sm md:text-base c-underline text-slate-700"
+              >Contact Us</a
+            >
+            <a href="" class="text-sm md:text-base c-underline text-slate-700"
+              >Book Calendar</a
+            >
+            <a href="Mailto:complaint@qatarjobsportal.com" class="text-sm md:text-base c-underline text-slate-700"
+              >Submit Complaint</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex gap-1 justify-between items-center border-t border-t-red-800"
+      >
+        <div class="flex mt-4">
+          <span class="text-sm font-medium m-color md:text-base">Follow Us On</span>
+        </div>
+
+        <div class="flex mt-4 gap-4 items-center">
+          <a href="">
+          <img src="{{url_for('static', filename='./src/assets/facebook.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        <a href="">
+          <img src="{{url_for('static', filename='./src/assets/instagram.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        <a href="">
+          <img src="{{url_for('static', filename='./src/assets/tiktok.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        <a href="">
+          <img src="{{url_for('static', filename='./src/assets/linkedin.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        <a href="">
+          <img src="{{url_for('static', filename='./src/assets/youtube.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        <a href="">
+          <img src="{{url_for('static', filename='./src/assets/whatsapp-red.svg')}}" class="w-5 md:w-6" alt="" />
+        </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript to hide the alert and adjust the header position
+      const closeButton = document.querySelector(".remove-svg");
+      const alertBox = document.getElementById("alert-box");
+      const headerContent = document.getElementById("header-content");
+
+      closeButton.addEventListener("click", () => {
+        alertBox.style.display = "none";
+      });
+
+      // image overlay
+
+      function toggleContent(element, event) {
+        event.stopPropagation();
+        document.querySelectorAll(".group").forEach((card) => {
+          if (card !== element) {
+            card.classList.remove("active");
+          }
+        });
+        element.classList.toggle("active");
+      }
+
+      document.addEventListener("click", (event) => {
+        document.querySelectorAll(".group").forEach((card) => {
+          if (!card.contains(event.target)) {
+            card.classList.remove("active");
+          }
+        });
+      });
+
+      // accordian & its animation
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+
+      // country filter
+      const selectedCountry = document.querySelector("#selected-country");
+      const countryList = document.querySelector("#country-list");
+      const countryItems = document.querySelectorAll("#country-list > div");
+
+
+      // Toggle the country list on click
+      document
+        .querySelector(".countries-dropdown")
+        .addEventListener("click", () => {
+          countryList.classList.toggle("hidden");
+        });
+      
+      
+    </script>
+  </body>
+</html>
+
+<!-- {% endblock %} -->

@@ -1,0 +1,333 @@
+{% extends "admin_base.html" %}
+{% block title %} Employer Profile {% endblock %}
+{% block body %}
+
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+          <div class="">
+            <h3 class="font-semibold sm:font-bold text-base sm:text-lg b-color">
+              Employer Profile
+            </h3>
+          </div>
+
+          <!-- profile card  -->
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 bg-white px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+          >
+            <!-- profile pic  Business ID  -->
+            <div class="flex justify-between">
+              <!-- Business ID  -->
+              <div class="flex flex-col w-16 justify-start items-start">
+                <div class="flex items-center">
+                  <span class="c-text-uxs font-medium tracking-tight"
+                    >Business ID: </span
+                  ><span class="c-text-uxs tracking-tight">123</span>
+                </div>
+                <!-- Registration  -->
+                <div class="flex items-center">
+                  <span class="c-text-uxs font-medium tracking-tight"
+                    >Registration: </span
+                  ><span class="c-text-uxs tracking-tight">26/12/24</span>
+                </div>
+              </div>
+              <!-- profile pic  -->
+              <div class="flex flex-col justify-center gap-1">
+                <!-- profile Picture   -->
+                <div class="flex flex-col gap-1 items-center justify-center">
+                  <div
+                    class="flex rounded-full border-4 w-24 h-24 justify-center items-center flex-shrink-0"
+                  >
+                    <img
+                      id="profileImage"
+                      src="{{url_for('static', filename='./src/assets/business-adver-emoji.webp')}}"
+                      class="w-20 h-20 rounded-full object-cover object-top"
+                      alt=""
+                    />
+                  </div>
+                  <!-- File Input for Upload -->
+                  <div class="flex flex-col justify-center items-center">
+                    <!-- <div
+                      class="b-bg-h-color flex gap-1 rounded-full pr-2 items-center border border-white"
+                    >
+                      <picture
+                        class="bg-white hover:bg-slate-100 rounded-full border border-white"
+                      >
+                        <img
+                          src="../../assets/upload-photo.svg"
+                          alt=""
+                          class="w-4 m-1"
+                        />
+                      </picture>
+
+                      <label
+                      readonly
+                        for=""
+                        class="font-semibold cursor-pointer text-sm text-white"
+                      >
+                        Upload Logo
+                      </label>
+                      <input
+                      readonly
+                        id="uploadLogo"
+                        type="file"
+                        accept="image/*"
+                        class="hidden"
+                      />
+                    </div> -->
+                  </div>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <h4 class="font-semibold text-base leading-4 text-stone-800">
+                    Abc Builders
+                  </h4>
+                  <h4 class="font-medium text-base leading-4">Ahmad Khan</h4>
+                </div>
+              </div>
+
+              <!-- edit profile link  -->
+              <div class="flex w-20">
+                <div class="flex flex-col gap-1">
+                  <a
+                    href="./admin_edit_employer"
+                    class="w-20 py-1 bg-green-600 hover:bg-white hover:border hover:border-green-600 hover:text-green-600 text-white text-xs rounded-full flex justify-center"
+                    >Edit Profile</a
+                  >
+
+                  <a
+                    href=""
+                    class="w-20 py-1 bg-red-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white text-xs h-fit rounded-full flex justify-center"
+                    >Trash</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+              <!-- personal info  -->
+              <div
+                class="flex flex-col gap-1 bg-stone-100 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+                  <!-- Username  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/at-red.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          id="username"
+                          type="text"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="abc311"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Email  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/envelope-red.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          id="email"
+                          type="email"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="abc@gmail.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Contact Number  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/card.svg')}}"
+                          class="h-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          id="number"
+                          type="text"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="+974 1234 4567"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Organization Name   -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/Department.svg')}}"
+                          class="h-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          id="org_name"
+                          type="text"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="https://www.abc.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <!-- Organization Docs   -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/Department.svg')}}"
+                          class="h-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          id="org_docs"
+                          type="url"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="https://www.drive.google.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- LinkedIn Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/linkedin.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          type="url"
+                          id="linkedin"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="https://www.linkedin.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Facebook Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/facebook.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          type="url"
+                          id="facebook"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="https://www.facebook.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Instagram Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/instagram.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <input
+                          readonly
+                          type="url"
+                          id="instagram"
+                          class="w-full rounded-full text-xs px-2 py-3 sm:py-3.5 bg-stone-100 focus:outline-none"
+                          placeholder="https://www.instagram.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- submit button  -->
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+      
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const menu = document.getElementById("menu");
+  
+        menuBtn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          menuBtn.classList.toggle("active");
+        });
+      </script>
+ {% endblock %}

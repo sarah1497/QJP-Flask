@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: #f4f2ee;  
+}
+.add-bg-img{
+    background-image: url(../assets/tab-card-bg.webp);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "DM Sans", sans-serif;
+}
+.c-bg-color{
+    background-color: #5c0931;
+}
+.b-bg-color{
+    background-color: #5c0931;
+}
+.transparent-bg-color{
+    background-color: #8e215734; 
+    transition: background-color 0.3s ease;
+}
+.transparent-bg-color:hover{
+    background-color: #8e215779;
+}
+.b-color{
+color: #5c0931;
+}
+.b-bg-h-color{
+    background-color: #5c0931;
+}
+.b-bg-h-color:hover{
+    background-color: #4f0629;
+}
+.m-color{
+    color: #5c0931 !important;
+}
+.c-border{
+    border: 1px solid #5c0931 !important;
+}
+.c-w-48{
+    width: 48%;
+}
+.c-w-98{
+    width: 98%;
+}
+.c-text-sm{
+    font-size: 0.7rem
+}
+.c-text-xs{
+    font-size: 0.65rem
+}
+.c-text-xxs{
+    font-size: 0.6rem
+}
+.c-text-uxs{
+    font-size: 0.5rem
+}
+.t-xs-plus{
+    font-size: .9rem
+}
+.t-xs{
+    font-size: .8rem
+}
+.m-btn{
+    background-color: #5c0931 ;
+    color: white;
+}
+.special{
+    -webkit-text-stroke: 0.1rem #5c0931;
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+.m-btn:hover{
+    background-color: white;
+    border: 1px solid #5c0931;
+    color: #5c0931;
+}
+.m-btn-white{
+    background-color: white ;
+    color: #5c0931;
+}
+.m-btn-white:hover{
+    background-color: #5c0931;
+    border: 1px solid white;
+    color: white;
+}
+
+.c-wh-btn{
+    background-color: #5c0931;
+    border: 1px solid white;
+    color: white;
+}
+
+.c-wh-btn:hover{
+    background-color: white;
+    color: #5c0931;
+    border: 1px solid #5c0931;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin: 20px 13px;
+}
+.c-underline{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.c-h-underline{
+    text-decoration: none;
+}
+.c-h-underline:hover{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+.c-accent{
+ accent-color: #5c0931;
+}
+.footer-leading{
+    line-height: 10px !important;
+}
+.advertActiveTab{
+
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 6px 7px -11px var(--tw-shadow-color), 0 5px 5px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    --tw-shadow-color: rgba(80, 15, 15, 0.9);
+    --tw-shadow: var(--tw-shadow-colored);
+}
+.whatsapp-btn{
+    animation: whatsapp-growing 3s ease-out infinite;
+}
+/* Active State (Cross Icon) */
+#menu-btn.active .menu-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  #menu-btn.active .menu-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-btn.active .menu-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+@keyframes whatsapp-growing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.growing-btn{
+        background-color: #5c0931;
+    }
+    .animate-growing-btn {
+        animation: growing 3s ease-out infinite;
+    }
+@keyframes growing {
+    0%, 100% {
+        opacity: 0.8; 
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5; 
+    }
+}
+
+.wa-text {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 6s infinite;
+}
+
+/* First text starts immediately */
+.wa-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* Second text starts after the first finishes */
+.wa-text:nth-child(2) {
+    animation-delay: 3s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10%, 40% {
+        opacity: 1; /* Text fully visible */
+    }
+    50% {
+        opacity: 0; /* Text starts fading out */
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.button-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.button-slider::-webkit-scrollbar {
+    display: none; 
+  } 
+.resume-bg{
+    background: linear-gradient(149deg, #ffffff   0%, #d7d1d1     99.08%);
+}
+.resume-bg:hover{
+    background: linear-gradient(149deg, #ffffff  0%, #a19a9a  99.08%);
+}
+.swiper-pagination-bullet-active{
+    background: #5c0931;
+  }
+  .progress-indicator {
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.3s ease;
+}
+.progress-indicator.dot {
+    width: 8px;
+}
+.progress-indicator.active {
+    width: 30px;
+}
+.progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #5c0931;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+@media (min-width: 500px){
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin: 26px 30px;
+    }
+}
+@media (min-width: 768px){
+    .main {
+        gap: 28px;
+        margin: 6px 12px;
+        width: 755px;
+    }
+    .hide-full-width {
+        gap: 28px ;
+        margin: 6px 12px ;
+        width: 755px ;
+    }
+    body{
+        display: flex;
+        align-items: center;
+    }
+    .head-foot-width{
+        width: 755px !important;
+    }
+}

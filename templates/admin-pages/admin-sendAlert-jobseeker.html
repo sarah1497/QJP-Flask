@@ -1,0 +1,235 @@
+{% extends "admin_base.html" %}
+{% block title %} Send Alert JobSeekers {% endblock %}
+{% block body %}
+
+    <!-- -->
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-7 rounded-xl">
+          
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 bg-white px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+          >
+        
+          <div class="flex">
+            <h2 class="font-semibold sm:font-bold text-base sm:text-lg b-color px-2">Send Alert to JobSeekers</h2>
+          </div>
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+
+              <div
+                class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+                  <!-- Name  -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="title" class="font-medium text-xs sm:text-sm pl-2">
+                        Enter Title:</label
+                      >
+                    <input
+                      required
+                      name=""
+                      id="title"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Enter Title"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                     <!-- Description  -->
+                     <div class="flex flex-col gap-0.5">
+
+                        <label for="description" class="font-medium text-xs sm:text-sm pl-2">
+                            Description:</label
+                          >
+                        <textarea name="description" id="description"  class="border w-full rounded-xl text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5" placeholder="Details here" rows="4"></textarea>
+                        
+                      <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                    </div>
+
+
+                    
+                      <!-- Alert Title   -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="title" class="font-medium text-xs sm:text-sm pl-2">
+                      Alert Title:</label
+                      >
+                    <input
+                      required
+                      name=""
+                      id="title"
+                      type="text"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Enter Alert Title"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+                      <!-- Alert Link   -->
+                  <div class="flex flex-col gap-0.5">
+                    <label for="alert_link" class="font-medium text-xs sm:text-sm pl-2">
+                      Alert Link:</label
+                      >
+                    <input
+                      required
+                      name=""
+                      id="alert_link"
+                      type="url"
+                      class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                      placeholder="Alert Link"
+                    />
+                    <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+              <!-- submit button  -->
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+              >
+                Broadcast
+              </button>
+
+
+            </div>
+
+            
+          </form>
+
+          <!-- Alerts history  -->
+          <div class="flex flex-col gap-3">
+            
+            <div class="flex">
+                <h2 class="font-semibold sm:font-bold text-base sm:text-lg b-color px-2">JobSeeker Alerts History</h2>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+                
+                      <!-- Card 1 -->
+                      <div
+                        class="flex justify-between gap-2 w-full bg-white hover:bg-stone-50 px-2 py-2.5 rounded-xl shadow-sm shadow-black/40"
+                      >
+                        <div class="flex gap-1">
+
+                          <div class="flex flex-col justify-start gap-1">
+                            <div class="flex">
+                              <span class="text-sm font-medium"
+                                >Title</span
+                              >
+                            </div>
+
+                            <div class="flex">
+                              <span
+                                class="text-xs text-gray-900"
+                                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, quibusdam. Lorem, ipsum dolor sit amet constur adipisicing elit. Praesentium, non?
+                              </span>
+                            </div>
+                         
+                          </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                          <div class="flex flex-col gap-1">
+                           
+                            <a
+                              href=""
+                              flex
+                              px-5
+                              sm:px-5
+                              py-1
+                              class="w-16 py-1 bg-red-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white text-xs h-fit rounded-full flex justify-center"
+                              >Delete</a
+                            >
+                          </div>
+
+                          
+                          <div class="flex mt-atuo justify-end items-end h-full">
+                            <span
+                              class="text-xs text-black font-medium"
+                              >26/12/2024
+                            </span>
+                          </div>
+                 
+                        </div>
+                      </div>
+
+                      <!-- Card 2 -->
+                      <div
+                        class="flex justify-between gap-2 w-full bg-white hover:bg-stone-50 px-2 py-2.5 rounded-xl shadow-sm shadow-black/40"
+                      >
+                        <div class="flex gap-1">
+
+                          <div class="flex flex-col justify-start gap-1">
+                            <div class="flex">
+                              <span class="text-sm font-medium"
+                                >Title</span
+                              >
+                            </div>
+
+                            <div class="flex">
+                              <span
+                                class="text-xs text-gray-900"
+                                >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, quibusdam. Lorem, ipsum dolor sit amet constur adipisicing elit. Praesentium, non?
+                              </span>
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                          <div class="flex flex-col gap-1">
+                           
+                            <a
+                              href=""
+                              flex
+                              px-5
+                              sm:px-5
+                              py-1
+                              class="w-16 py-1 bg-red-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white text-xs h-fit rounded-full flex justify-center"
+                              >Delete</a
+                            >
+                          </div>
+
+                          
+                          <div class="flex mt-atuo justify-end items-end h-full">
+                            <span
+                              class="text-xs text-black font-medium"
+                              >26/12/2024
+                            </span>
+                          </div>
+                 
+                        </div>
+                      </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menuBtn.classList.toggle('active');
+        });
+        
+  
+      </script>
+      
+ {% endblock %}

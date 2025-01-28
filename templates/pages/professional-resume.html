@@ -1,0 +1,1095 @@
+{% extends "base.html" %}
+{% block title %} Professional Resume {% endblock %}
+{% block body %}
+
+    <!-- deafultContent tab  -->
+    <div id="deafultContent" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        
+                 <!-- Advertisement Swiper -->
+                 <div class="swiper adSwiper w-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center">
+                      <img src="{{url_for('static', filename='./src/assets/advertise-business.webp')}}" class="w-full h-full object-cover rounded-xl" alt="">
+                  </div>
+                    <div class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center">
+                      <img src="{{url_for('static', filename='./src/assets/find-talent.webp')}}" class="w-full h-full object-cover rounded-xl" alt="">
+                  </div>
+                    <div class="swiper-slide h-[180px] c-md:h-[240px] md:h-[300px] flex items-center justify-center">
+                      <img src="{{url_for('static', filename='./src/assets/business.webp')}}" class="w-full h-full object-cover rounded-xl" alt="">
+                  </div>
+                  </div>
+                  <div class="swiper-scrollbar b-color"></div>
+                </div>
+
+        <!-- body  -->
+          <!-- head  -->
+          <div class="flex flex-col gap-4">
+            <div class="flex">
+              <h4 class="text-base md:text-lg font-semibold m-color">
+                Professional Resume Writing
+              </h4>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <h4 class="text-sm font-semibold text-black">
+                Get 3X times faster response with Professional Resume
+              </h4>
+              <span class="text-sm text-stone-800 tracking-tight">
+                A featured jobseeker profile appears on top of relevant job
+                search and receives high visibility in front of hiring managers.
+                Super charge your profile by
+              </span>
+            </div>
+          </div>
+
+          <!-- Resume Carousal  -->
+          <div class="swiper resumeSwiper w-full pt-12 pb-12">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume1.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume2.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume3.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume4.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume5.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume6.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume7.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume8.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume9.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume10.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume11.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume12.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume13.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume14.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume15.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+              <div
+                class="swiper-slide bg-center bg-cover flex items-center justify-center rounded-2xl h-[300px] c-md:h-[360px] c-w-4/12 w-3/5 b-bg-color"
+              >
+                <img src="{{url_for('static', filename='./src/assets/resume-16.webp')}}" class="w-full sm:w-10/12" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Resume Typesservices -->
+          <div class="flex flex-col gap-1">
+            <div class="flex flex-wrap gap-6 justify-between w-full">
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight">
+                  Tailored Resume
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  Each resume is written and designed according to your profile.
+                </span>
+
+
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+1
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight"
+                  >ATS Friendly format
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  Our professional resume has the highest ATS score which helps
+                  your application to be ranked in the top.
+                </span>
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+2
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight">
+                  Editable file provided
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  We provided editable word format along with PDF version for
+                  your future self edits.
+                </span>
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+3
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight">
+                  No page limits
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  Our charges are fixed and we do not charge for number of
+                  pages.
+                </span>
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+4
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight">
+                  Lifetime Free Update
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  We offer a lifetime FREE update of your resume.
+                </span>
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+5
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+
+              <div
+                class="flex flex-col gap-2 w-[46%] rounded-xl shadow-sm shadow-black/40 resume-bg py-[18px] px-2 relative"
+              >
+                <span class="text-sm font-semibold b-color tracking-tight">
+                  Delivery in 2 days
+                </span>
+                <span class="c-text-sm font-semibold text-stone-700">
+                  First draft of your resume is shared within 2 days for review
+                </span>
+                <!-- overlay text  -->
+                <div
+                  class="absolute -top-0 right-10 flex items-center"
+                >
+                    <span
+                      class="absolute h-10 w-10 flex items-center justify-center rounded-full bg-white border shadow-sm shadow-black/10"
+                    >
+                      <strong class="h-7 w-7 rounded-full bg-[#5c0931] text-white flex justify-center items-center">
+6
+                      </strong>
+                    </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- tabs  -->
+          <div
+            class="flex sm:justify-center gap-7 py-4 px-1.5 button-slider overflow-hidden pl-2"
+          >
+            <!-- Career Basic  -->
+            <div
+              class="flex flex-shrink-0 c-bg-color flex-col gap-0.5 items-center justify-center rounded-xl h-48 w-36 hover shadow-sm shadow-black/10 text-white cursor-pointer relative"
+              id="careerBasic-tab"
+              onclick="showAdvertTab('careerBasic', this)"
+            >
+              <!-- bg image  -->
+              <img
+                src="{{url_for('static', filename='./src/assets/tab-card-bg.webp')}}"
+                alt=""
+                class="w-full h-full object-cover object-top rounded-xl"
+              />
+
+              <img
+                src="{{url_for('static', filename='./src/assets/shield.svg')}}"
+                class="h-9 absolute top-8"
+                alt=""
+              />
+
+              <div class="flex absolute bottom-16">
+                <h4 class="text-xl font-bold leading-5 px-2">Career BASIC</h4>
+              </div>
+              <div class="flex absolute bottom-4 px-2">
+                <span class="text-sm font-medium leading-4"
+                  >Get a tailored, ATS friendly resume</span
+                >
+              </div>
+              <!-- tab Numbers  -->
+              <div class="absolute -left-2 top-4 font-extrabold">
+                <span class="flex text-5xl special">1</span>
+              </div>
+            </div>
+
+            <!-- Career PRO  -->
+            <div
+              class="flex flex-shrink-0 c-bg-color flex-col gap-0.5 items-center justify-center rounded-xl h-48 w-36 hover shadow-sm shadow-black/10 text-white cursor-pointer relative"
+              id="careerPro-tab"
+              onclick="showAdvertTab('careerPro', this)"
+            >
+              <!-- bg image  -->
+              <img
+                src="{{url_for('static', filename='./src/assets/tab-card-bg.webp')}}"
+                alt=""
+                class="w-full h-full object-cover object-top rounded-xl"
+              />
+
+              <img
+                src="{{url_for('static', filename='./src/assets/award.svg')}}"
+                class="h-9 absolute top-8"
+                alt=""
+              />
+
+              <div class="flex absolute bottom-16">
+                <h4 class="text-xl font-bold leading-5 px-2">Career PRO</h4>
+              </div>
+              <div class="flex absolute bottom-4 px-2">
+                <span class="text-sm font-medium leading-4"
+                  >Add Optimization of your profile</span
+                >
+              </div>
+              <!-- tab Numbers  -->
+              <div class="absolute -left-2 top-4 font-extrabold">
+                <span class="flex text-5xl special">2</span>
+              </div>
+            </div>
+
+            <!-- Career BOOSTER  -->
+            <div
+              class="flex flex-shrink-0 c-bg-color flex-col gap-0.5 items-center justify-center rounded-xl h-48 w-36 hover shadow-sm shadow-black/10 text-white cursor-pointer relative"
+              id="careerPremium-tab"
+              onclick="showAdvertTab('careerPremium', this)"
+            >
+              <!-- bg image  -->
+              <img
+                src="{{url_for('static', filename='./src/assets/tab-card-bg.webp')}}"
+                alt=""
+                class="w-full h-full object-cover object-top rounded-xl"
+              />
+
+              <img
+                src="{{url_for('static', filename='./src/assets/crown.svg')}}"
+                class="h-9 absolute top-8"
+                alt=""
+              />
+
+              <div class="flex absolute bottom-16">
+                <h4 class="text-xl font-bold leading-5 px-2">Career BOOSTER</h4>
+              </div>
+              <div class="flex absolute bottom-4 px-2">
+                <span class="text-sm font-medium leading-4"
+                  >Include a powerful cover letter</span
+                >
+              </div>
+              <!-- tab Numbers  -->
+              <div class="absolute -left-2 top-4 font-extrabold">
+                <span class="flex text-5xl special">3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- tabs content  -->
+          <div class="flex flex-col gap-1">
+            <div id="careerBasic" class="hidden">
+              <div
+                class="flex bg-white flex-col gap-5 px-3 py-4 rounded-xl shadow-sm shadow-black/40 hover:bg-stone-50"
+              >
+                <!-- head  -->
+                <div class="flex flex-col gap-0.5">
+                  <h3 class="text-base md:text-lg font-semibold m-color">
+                    Career BASIC
+                  </h3>
+                  <h4 class="text-sm font-semibold m-color">Resume Only</h4>
+                </div>
+
+                <!-- ul li points  -->
+                <div class="flex">
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rewrite and Redesign by Expert</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >ATS Friendly Format</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rapid 2-Day Delivery</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >PDF & Word File provided</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Lifetime FREE Revisions & Updates</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Full payment after completion</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Choose any from 16 templates</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- pricing button  -->
+                <div class="flex justify-center gap-1">
+                  <a href="#" class="px-3.5 py-1.5 m-btn text-sm rounded-full  w-full text-center shadow-sm shadow-black/20"
+                    >Only On <span class="font-semibold">120 QAR</span></a
+                  >
+
+                </div>
+              </div>
+            </div>
+
+            <div id="careerPro" class="hidden">
+              <div
+                class="flex bg-white flex-col gap-5 px-3 py-4 rounded-xl shadow-sm shadow-black/40 hover:bg-stone-50"
+              >
+                <!-- head  -->
+                <div class="flex flex-col gap-0.5">
+                  <h3 class="text-base font-semibold m-color">Career PRO</h3>
+                  <h4 class="text-sm font-semibold m-color">
+                    Resume + LinkedIn Profile
+                  </h4>
+                </div>
+
+                <!-- ul li points  -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-sm font-semibold m-color">
+                    Resume Writing Includes
+                  </span>
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rewrite and Redesign by Expert</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >ATS Friendly Format</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rapid 2-Day Delivery</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >PDF & Word File provided</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Lifetime FREE Revisions & Updates</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Full payment after completion</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Choose any from 16 templates</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- linkdin ul li points  -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-sm font-semibold m-color">
+                    LinkedIn Profile Optimization Includes:
+                  </span>
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >100% completion of profile
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add 100+ top and active recruiters
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add Cover Photo
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add Featured elements
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Set relevant job alerts
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Sync resume with profile
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- pricing button  -->
+                <div class="flex justify-center gap-1">
+                  <a href="#" class="px-3.5 py-1.5 m-btn text-sm rounded-full  w-full text-center shadow-sm shadow-black/20"
+                    >Only On <span class="font-semibold">200 QAR</span></a
+                  >
+
+                </div>
+              </div>
+            </div>
+
+            <div id="careerPremium" class="hidden">
+              <div
+                class="flex bg-white flex-col gap-5 px-3 py-4 rounded-xl shadow-sm shadow-black/40 hover:bg-stone-50"
+              >
+                <!-- head  -->
+                <div class="flex flex-col gap-0.5">
+                  <h3 class="text-base font-semibold m-color">
+                    Career BOOSTER
+                  </h3>
+                  <h4 class="text-sm font-semibold m-color">
+                    Resume + LinkedIn Profile + Cover Letter
+                  </h4>
+                </div>
+
+                <!-- ul li points  -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-sm font-semibold m-color">
+                    Resume Writing Includes
+                  </span>
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rewrite and Redesign by Expert</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >ATS Friendly Format</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Rapid 2-Day Delivery</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >PDF & Word File provided</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Lifetime FREE Revisions & Updates</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Full payment after completion</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Choose any from 16 templates</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- linkdin ul li points  -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-sm font-semibold m-color">
+                    LinkedIn Profile Optimization Includes:
+                  </span>
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >100% completion of profile
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add 100+ top and active recruiters
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add Cover Photo
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Add Featured elements
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Set relevant job alerts
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1">
+                      <i
+                        class="flex items-center fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Sync resume with profile
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- cover letter ul li points  -->
+                <div class="flex flex-col gap-2">
+                  <span class="text-sm font-semibold m-color">
+                    Cover Letter Includes:
+                  </span>
+                  <ul class="flex flex-col gap-3">
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Write impactful Cover Letter
+                      </span>
+                    </li>
+                    <li class="flex items-start gap-1 text-sm">
+                      <i
+                        class="fa-solid fa-square-check m-color text-sm sm:text-base"
+                      ></i>
+                      <span class="text-stone-800 text-xs sm:text-sm"
+                        >Match with Professional Resume template
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- pricing button  -->
+                <div class="flex justify-center gap-1">
+                  <a href="#" class="px-3.5 py-1.5 m-btn text-sm rounded-full  w-full text-center shadow-sm shadow-black/20"
+                    >Only On <span class="font-semibold">230 QAR</span></a
+                  >
+
+            
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- faqs  -->
+          <div class="flex flex-col gap-2">
+            <div class="flex">
+              <h4 class="flex text-base font-medium">
+                Frequently Asked Questions
+              </h4>
+            </div>
+
+            <div class="accordion-item border-y border-white-300 bg-white">
+              <h4
+                class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+              >
+                <span class="text-base text-slate-950"
+                  >What does your resume service include?</span
+                >
+                <img
+                  src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                  alt="arrow"
+                  class="w-3 arrow transition-transform duration-300"
+                />
+              </h4>
+              <div
+                class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+              >
+                <p class="text-xs text-slate-700">
+                  Our professional resume service includes a custom-tailored
+                  resume designed to highlight your skills, achievements, and
+                  experience. We ensure that your resume is optimized for
+                  applicant tracking systems (ATS) and meets industry standards
+                  to help you stand out to potential employers.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-300 bg-white">
+              <h4
+                class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+              >
+                <span class="text-base text-slate-950"
+                  >Why should I choose your resume service?</span
+                >
+                <img
+                  src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                  alt="arrow"
+                  class="w-3 arrow transition-transform duration-300"
+                />
+              </h4>
+              <div
+                class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+              >
+                <p class="text-xs text-slate-700">
+                  Our team of experts specializes in crafting impactful resumes
+                  that showcase your unique qualifications. We stay updated with
+                  hiring trends and industry demands to create resumes that not
+                  only look professional but also help you secure interviews
+                  faster.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-300 bg-white">
+              <h4
+                class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+              >
+                <span class="text-base text-slate-950"
+                  >Do you provide cover letters or LinkedIn profile
+                  optimization?</span
+                >
+                <img
+                  src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                  alt="arrow"
+                  class="w-3 arrow transition-transform duration-300"
+                />
+              </h4>
+              <div
+                class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+              >
+                <p class="text-xs text-slate-700">
+                  Yes! Along with resume writing, we offer cover letter creation
+                  and LinkedIn profile optimization services to present a
+                  cohesive and professional image across all platforms. These
+                  services complement your resume and boost your chances of
+                  getting noticed by recruiters.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-300 bg-white">
+              <h4
+                class="accordion-header flex justify-between items-center p-3 cursor-pointer"
+              >
+                <span class="text-base text-slate-950"
+                  >How long does it take to get my resume?</span
+                >
+                <img
+                  src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+                  alt="arrow"
+                  class="w-3 arrow transition-transform duration-300"
+                />
+              </h4>
+              <div
+                class="accordion-content hidden flex flex-col gap-2 p-3 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+              >
+                <p class="text-xs text-slate-700">
+                  Our standard delivery time is 2-4 business days. If you need
+                  your resume sooner, we also offer expedited delivery options
+                  to meet urgent deadlines.
+                </p>
+              </div>
+            </div>
+          </div>
+      </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/a65c1abfe9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Initialize or update Swiper
+      let swiperInstance = null;
+
+      function initializeSwiper() {
+        // Initialize swiper only if it's not initialized yet
+        if (!swiperInstance) {
+          swiperInstance = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            // pagination: {
+            //   el: ".swiper-pagination",
+            //   clickable: true,
+            // },
+          });
+        } else {
+          swiperInstance.update();
+        }
+      }
+
+      setTimeout(() => {
+        var swiper = new Swiper(".resumeSwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+
+            clickable: true,
+          },
+        });
+      }, 100);
+
+    
+
+      var adswiper = new Swiper(".adSwiper", {
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+    });
+
+      // accordian & its animation
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+
+      // advertise tab
+      function showAdvertTab(tabId, selectedBtn) {
+        // Hide all tab contents explicitly
+        document.getElementById("careerBasic").classList.add("hidden");
+        document.getElementById("careerPro").classList.add("hidden");
+        document.getElementById("careerPremium").classList.add("hidden");
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.remove("hidden");
+
+        // Reset all buttons explicitly
+        document
+          .getElementById("careerBasic-tab")
+          .classList.remove("advertActiveTab");
+        document
+          .getElementById("careerPro-tab")
+          .classList.remove("advertActiveTab");
+        document
+          .getElementById("careerPremium-tab")
+          .classList.remove("advertActiveTab");
+
+        // Center the clicked tab in the view
+        const container = document.querySelector(".button-slider"); // Parent container
+        const elementOffset = selectedBtn.offsetLeft; // Distance of tab from container's left edge
+        const elementWidth = selectedBtn.offsetWidth; // Width of the clicked tab
+        const containerWidth = container.offsetWidth; // Visible width of the container
+
+        // Calculate the scroll position to center the tab
+        const scrollPosition =
+          elementOffset - containerWidth / 2 + elementWidth / 2;
+
+        // Scroll the container to the calculated position
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth", // Smooth scrolling effect
+        });
+
+        // Set active state for the selected button
+        selectedBtn.classList.add("advertActiveTab");
+      }
+
+      function showTab(index, tabId, selectedBtn) {
+        // Hide the default global data when any tab is activated
+        const deafultContent = document.getElementById("deafultContent");
+        if (deafultContent) {
+          deafultContent.classList.add("hidden");
+        }
+
+        document.getElementById("jobSeekerTab").classList.add("hidden");
+        document.getElementById("businessTab").classList.add("hidden");
+
+        document.getElementById(tabId).classList.remove("hidden");
+
+        // Move the slider
+        const sliderBg = document.querySelector(".slider-bg");
+        sliderBg.style.transform = `translateX(${index * 100}%)`;
+
+        // Reset all buttons to their default text color
+        const buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach((button) => {
+          button.classList.remove("m-color");
+          button.classList.add("text-white");
+        });
+        selectedBtn.classList.add("m-color");
+        selectedBtn.classList.remove("text-white");
+      }
+
+      // country filter
+      const selectedCountry = document.querySelector("#selected-country");
+      const countryList = document.querySelector("#country-list");
+      const countryItems = document.querySelectorAll("#country-list > div");
+
+      // Toggle the country list on click
+      document
+        .querySelector(".countries-dropdown")
+        .addEventListener("click", () => {
+          countryList.classList.toggle("hidden");
+        });
+
+      // Business tab card animation
+
+      // image overlay
+
+      function toggleContent(element, event) {
+        event.stopPropagation();
+        document.querySelectorAll(".group").forEach((card) => {
+          if (card !== element) {
+            card.classList.remove("active");
+          }
+        });
+        element.classList.toggle("active");
+      }
+    </script>
+{% endblock %}

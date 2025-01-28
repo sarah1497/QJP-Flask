@@ -1,0 +1,473 @@
+{% extends "employee_pages_base.html" %}
+{% block title %} Employer Home {% endblock %}
+{% block body %}
+  
+    <div
+      id=""
+      class=" md:w-full flex md:items-center flex-col"
+    >
+      <main class="main !mt-16 !mb-14">
+        <!-- body  -->
+
+    
+
+        <div class="flex flex-col gap-4 rounded-xl">
+
+
+          <div class="">
+            <h3 class="font-semibold sm:font-bold text-base sm:text-lg b-color">
+              Employer Home
+            </h3>
+          </div>
+        
+          
+          <div class="flex flex-col gap-1">
+            <div class="">
+              <h4
+                class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+              >
+                Actions
+              </h4>
+            </div>
+            <div class="flex flex-wrap gap-2">
+            <!-- Post a Job  -->
+            <a href="employer_postJob" class="">
+              <div
+                class="bg-gradient-to-r  from-[#5c0931]/90 to-[#5c0931]/60  bg-opacity-30 hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]">
+                  Post a Job
+                </p>
+              </div></a
+            >
+
+            <!-- My Jobs  -->
+            <a href="employer_myJobs" class="">
+              <div
+                class="bg-gradient-to-r to-[#5c0931]/90 from-[#5c0931]/60  bg-opacity-30  hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p
+                  class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]"
+                >
+                  My Jobs
+                </p>
+              </div></a
+            >
+
+            <!-- My Profile  -->
+            <a href="employer_profile" class="">
+              <div
+                class="bg-gradient-to-r from-[#5c0931]/90 to-[#5c0931]/60  bg-opacity-30  hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p
+                  class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]"
+                >
+                My Profile
+                </p>
+              </div></a
+            >
+          </div>
+            </div>
+          <div class="flex flex-col gap-1">
+
+
+            <div class="">
+              <h4
+                class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+              >
+              Contact Admin
+              </h4>
+            </div>
+            <div class="flex flex-wrap gap-2">
+            <!--  Submit Ticket  -->
+            <a href="" class="">
+              <div
+                class="bg-gradient-to-r to-[#5c0931]/90 from-[#5c0931]/60  bg-opacity-30  hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p
+                  class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]"
+                >
+                Submit Ticket
+                </p>
+              </div></a
+            >
+
+            <!--   Book Calendar  -->
+            <a href="" class="">
+              <div
+                class="bg-gradient-to-r from-[#5c0931]/90 to-[#5c0931]/60  bg-opacity-30  hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p
+                  class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]"
+                >
+                Book Calendar
+                </p>
+              </div></a
+            >
+
+            <!--   Connect on Whatsapp  -->
+            <a href="" class="">
+              <div
+                class="bg-gradient-to-r to-[#5c0931]/90 from-[#5c0931]/60  bg-opacity-30  hover:bg-opacity-95 flex flex-col border border-stone-200 px-1 rounded-xl items-center justify-around py-1 w-24 h-24 sm:w-28 sm:h-28 shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 group"
+              >
+                <img
+                  src="{{url_for('static', filename='./src/assets/star-white.svg')}}"
+                  class="w-8 sm:w-10"
+                  alt=""
+                />
+                <p
+                  class="text-xs sm:text-sm font-medium flex flex-wrap text-center text-stone-50 transition-all duration-300 hover:text-blue-100 group-hover:drop-shadow-[0_0_3px_rgba(255,215,0,0.5)]"
+                >
+                Connect on Whatsapp
+                </p>
+              </div></a
+            >
+          </div>
+
+</div>
+          
+            <!-- services -->
+            <div class="flex flex-col gap-1">
+  
+              
+          <div class="">
+            <h3
+              class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+            >
+             Business Services
+            </h3>
+          </div>
+
+              <div class="flex gap-2 flex-wrap justify-between w-full">
+                <div
+                  class="c-w-48 h-24 relative overflow-hidden group flex flex-col gap-1 w-full rounded-xl shadow-sm shadow-black/40 bg-pink-50 hover:bg-pink-200 active:bg-pink-200"
+                  ontouchstart="toggleContent(this, event)"
+                  onclick="toggleContent(this, event)"
+                >
+                  <a
+                    href="find_talent"
+                    class="w-full h-full cursor-pointer"
+                  >
+                    <span
+                      class="text-sm sm:text-base font-semibold text-pink-400 absolute bottom-14 left-1.5 transition-all duration-500 sm:group-hover:bottom-14 lg:group-hover:bottom-14 group-hover:opacity-100 group.active:bottom-14 group.active:opacity-100 tracking-tight w-[66%] leading-4"
+                    >
+                      Find Talent
+                    </span>
+                    <span
+                      class="c-text-sm c-md:text-xs md:text-sm font-medium text-stone-400 group-hover:text-pink-500 absolute bottom-5 left-1.5 transition-all duration-500 sm:group-hover:bottom-6 lg:group-hover:bottom-6 group-hover:opacity-100 group.active:bottom-6 group.active:opacity-100 w-[66%] leading-3"
+                    >
+                      Free <span></span>
+                    </span>
+                    <a
+                      href="block"
+                      class="hidden bottom-[-40px] left-2 group-hover:bottom-2 group-hover:left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 absolute px-4 py-1 text-white hover:text-[#8E2157] bg-[#8E2157] hover:bg-white hover:border hover:border-[#8E2157] text-xs rounded-full"
+                    >
+                      Learn More
+                    </a>
+  
+                    <!-- emoji -->
+                    <picture
+                      class="absolute -right-16 -top-2 bg-pink-200 p-8 rounded-full transition-all duration-400 group-hover:bottom-2.5 lg:group-hover:bottom-3 group.active:bottom-3 h-28 w-28"
+                    >
+                    </picture>
+  
+                    <img
+                      src="{{url_for('static', filename='./src/assets/find-talent-emoji.webp')}}"
+                      class="h-8 absolute right-1 top-8"
+                      alt=""
+                    />
+                  </a>
+                </div>
+  
+                <div
+                  class="c-w-48 h-24 relative overflow-hidden group flex flex-col gap-1 w-full rounded-xl shadow-sm shadow-black/40 bg-blue-50 hover:bg-blue-200 active:bg-blue-200"
+                  ontouchstart="toggleContent(this, event)"
+                  onclick="toggleContent(this, event)"
+                >
+                  <a href="post_job" class="w-full h-full cursor-pointer">
+                    <span
+                      class="text-sm sm:text-base font-semibold text-blue-400 absolute bottom-14 left-1.5 transition-all duration-500 sm:group-hover:bottom-14 lg:group-hover:bottom-14 group-hover:opacity-100 group.active:bottom-14 group.active:opacity-100 tracking-tight w-[66%] leading-4"
+                    >
+                      Post a Job
+                    </span>
+                    <span
+                      class="c-text-sm font-medium text-stone-400 group-hover:text-blue-500 absolute sm:text-xs bottom-5 left-1.5 transition-all duration-500 sm:group-hover:bottom-6 lg:group-hover:bottom-6 group-hover:opacity-100 group.active:bottom-6 group.active:opacity-100 w-[66%] leading-3"
+                    >
+                      Starting from : <span>QAR 60</span>
+                    </span>
+                    <a
+                      href="block"
+                      class="hidden bottom-[-40px] left-2 group-hover:bottom-2 group-hover:left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 absolute px-4 py-1 text-white hover:text-[#8E2157] bg-[#8E2157] hover:bg-white hover:border hover:border-[#8E2157] text-xs rounded-full"
+                    >
+                      Learn More
+                    </a>
+  
+                    <!-- emoji -->
+                    <picture
+                      class="absolute -right-16 -top-2 bg-blue-200 p-8 rounded-full transition-all duration-400 group-hover:bottom-2.5 lg:group-hover:bottom-3 group.active:bottom-3 h-28 w-28"
+                    >
+                    </picture>
+  
+                    <img
+                      src="{{url_for('static', filename='./src/assets/job-posting-emoji.webp')}}"
+                      class="h-8 absolute right-1 top-8"
+                      alt=""
+                    />
+                  </a>
+                </div>
+  
+                <div
+                  class="c-w-48 h-24 relative overflow-hidden group flex flex-col gap-1 w-full rounded-xl shadow-sm shadow-black/40 bg-purple-50 hover:bg-purple-200 active:bg-purple-200"
+                  ontouchstart="toggleContent(this, event)"
+                  onclick="toggleContent(this, event)"
+                >
+                  <a
+                    href="advertise_business"
+                    class="w-full h-full cursor-pointer"
+                  >
+                    <span
+                      class="text-sm sm:text-base font-semibold text-purple-400 absolute bottom-14 left-1.5 transition-all duration-500 sm:group-hover:bottom-14 lg:group-hover:bottom-14 group-hover:opacity-100 group.active:bottom-14 group.active:opacity-100 tracking-tight w-[66%] leading-4"
+                    >
+                      Business Advertising
+                    </span>
+                    <span
+                      class="c-text-sm font-medium text-stone-400 group-hover:text-purple-500 absolute sm:text-xs bottom-5 left-1.5 transition-all duration-500 sm:group-hover:bottom-6 lg:group-hover:bottom-6 group-hover:opacity-100 group.active:bottom-6 group.active:opacity-100 w-[66%] leading-3"
+                    >
+                      Starting from : <span>QAR 500</span>
+                    </span>
+                    <a
+                      href="block"
+                      class="hidden bottom-[-40px] left-2 group-hover:bottom-2 group-hover:left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 absolute px-4 py-1 text-white hover:text-[#8E2157] bg-[#8E2157] hover:bg-white hover:border hover:border-[#8E2157] text-xs rounded-full"
+                    >
+                      Learn More
+                    </a>
+  
+                    <!-- emoji -->
+                    <picture
+                      class="absolute -right-16 -top-2 bg-purple-200 p-8 rounded-full transition-all duration-400 group-hover:bottom-2.5 lg:group-hover:bottom-3 group.active:bottom-3 h-28 w-28"
+                    >
+                    </picture>
+  
+                    <img
+                      src="{{url_for('static', filename='./src/assets/business-adver-emoji.webp')}}"
+                      class="h-8 absolute right-1 top-8"
+                      alt=""
+                    />
+                  </a>
+                </div>
+  
+                <div
+                  class="c-w-48 h-24 relative overflow-hidden group flex flex-col gap-1 w-full rounded-xl shadow-sm shadow-black/40 bg-green-50 hover:bg-green-200 active:bg-green-200"
+                  ontouchstart="toggleContent(this, event)"
+                  onclick="toggleContent(this, event)"
+                >
+                  <a
+                    href="hr_outsourcing"
+                    class="w-full h-full cursor-pointer"
+                  >
+                    <span
+                      class="text-sm sm:text-base font-semibold text-green-400 absolute bottom-14 left-1.5 transition-all duration-500 sm:group-hover:bottom-14 lg:group-hover:bottom-14 group-hover:opacity-100 group.active:bottom-14 group.active:opacity-100 tracking-tight w-[66%] leading-4"
+                    >
+                      HR Outsourcing
+                    </span>
+                    <span
+                      class="c-text-sm font-medium text-stone-400 group-hover:text-green-500 absolute sm:text-xs bottom-5 left-1.5 transition-all duration-500 sm:group-hover:bottom-6 lg:group-hover:bottom-6 group-hover:opacity-100 group.active:bottom-6 group.active:opacity-100 w-[66%] leading-3"
+                    >
+                      Starting from : <span>QAR 2000</span>
+                    </span>
+                    <a
+                      href="block"
+                      class="hidden bottom-[-40px] left-2 group-hover:bottom-2 group-hover:left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 absolute px-4 py-1 text-white hover:text-[#8E2157] bg-[#8E2157] hover:bg-white hover:border hover:border-[#8E2157] text-xs rounded-full"
+                    >
+                      Learn More
+                    </a>
+  
+                    <!-- emoji -->
+                    <picture
+                      class="absolute -right-16 -top-2 bg-green-200 p-8 rounded-full transition-all duration-400 group-hover:bottom-2.5 lg:group-hover:bottom-3 group.active:bottom-3 h-28 w-28"
+                    >
+                    </picture>
+  
+                    <img
+                      src="{{url_for('static', filename='./src/assets/hr-outsourcing-emoji.webp')}}"
+                      class="h-8 absolute right-1 top-8"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </main>
+
+     
+    <footer
+    class="bg-white w-full flex flex-col gap-3 mt-auto px-4 pt-4 rounded-t-xl pb-2 head-foot-width"
+  >
+    <div class="flex flex-col gap-2">
+
+      <div class="accordion-item border-b border-gray-300">
+        <h4
+          class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+        >
+          <span class="text-base md:text-lg text-slate-600">For Employer</span>
+          <img
+            src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+            alt="arrow"
+            class="w-3 arrow transition-transform duration-300"
+          />
+        </h4>
+        <div
+          class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+        >
+          <a
+            href="find_talent"
+            class="text-sm md:text-base c-underline text-slate-700"
+            >Find Talent</a
+          >
+          <a
+            href="post_job"
+            class="text-sm md:text-base c-underline text-slate-700"
+            >Post a Job</a
+          >
+          <a
+            href="advertise_business"
+            class="text-sm md:text-base c-underline text-slate-700"
+            >Business Advertising</a
+          >
+          <a
+            href="hr_outsourcing"
+            class="text-sm md:text-base c-underline text-slate-700"
+            >HR Outsourcing</a
+          >
+        </div>
+      </div>
+
+      <div class="accordion-item border-b border-gray-300">
+        <h4
+          class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+        >
+          <span class="text-base md:text-lg text-slate-600">Policy Pages</span>
+          <img
+            src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+            alt="arrow"
+            class="w-3 arrow transition-transform duration-300"
+          />
+        </h4>
+        <div
+          class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+        >
+          <a href="refund_policy" class="text-sm md:text-base c-underline text-slate-700">
+            Refund Policy
+          </a>
+          <a href="terms_condition" class="text-sm md:text-base c-underline text-slate-700"
+            >Terms & Condition</a
+          >
+          <a href="privacy_policy" class="text-sm md:text-base c-underline text-slate-700"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+
+      <div class="accordion-item ">
+        <h4
+          class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+        >
+          <span class="text-base md:text-lg text-slate-600">Other</span>
+          <img
+            src="{{url_for('static', filename='./src/assets/arrow.svg')}}"
+            alt="arrow"
+            class="w-3 arrow transition-transform duration-300"
+          />
+        </h4>
+        <div
+          class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+        >
+          <a
+            href="contact_us"
+            class="text-sm md:text-base c-underline text-slate-700"
+            >Contact Us</a
+          >
+          <a href="" class="text-sm md:text-base c-underline text-slate-700"
+            >Book Calendar</a
+          >
+          <a href="Mailto:complaint@qatarjobsportal.com" class="text-sm md:text-base c-underline text-slate-700"
+            >Submit Complaint</a
+          >
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+   </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+ 
+
+          // accordian & its animation
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+    
+    </script>
+{% endblock %}

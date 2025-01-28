@@ -1,0 +1,376 @@
+{% extends "employee_pages_base.html" %}
+{% block title %} Employer Edit Profile {% endblock %}
+{% block body %}
+
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+
+          <div class="">
+            <h3
+              class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+            >
+            Edit Profile
+            </h3>
+          </div>
+
+          <!-- profile card  -->
+          <form
+            id="editForm"
+            class="flex flex-col gap-3 bg-white px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+          >
+            <!-- profile pic  Business ID  -->
+            <div class="flex justify-between">
+              <!-- Business ID  -->
+              <div class="flex flex-col w-16 justify-start items-start">
+                <div class="flex items-center">
+                  <span class="c-text-uxs font-medium tracking-tight"
+                    >Business ID: </span
+                  ><span class="c-text-uxs tracking-tight">123</span>
+                </div>
+                <!-- Registration  -->
+                <div class="flex items-center">
+                  <span class="c-text-uxs font-medium tracking-tight"
+                    >Registration: </span
+                  ><span class="c-text-uxs tracking-tight">26/12/24</span>
+                </div>
+              </div>
+            <!-- profile pic  -->
+              <div class="flex flex-col justify-center gap-1">
+                <!-- profile Picture   -->
+                <div class="flex flex-col gap-1 items-center justify-center">
+                  <div
+                    class="flex rounded-full border-4 w-24 h-24 justify-center items-center flex-shrink-0"
+                  >
+                    <img
+                      id="profileImage"
+                      src="{{url_for('static', filename='./src/assets/business-adver-emoji.webp')}}"
+                      class="w-20 h-20 rounded-full object-cover object-top"
+                      alt=""
+                    />
+                  </div>
+                  <!-- File Input for Upload -->
+                  <div class="flex flex-col justify-center items-center">
+                    <div
+                      class="b-bg-h-color flex gap-1 rounded-full pr-2 items-center border border-white"
+                    >
+                      <picture
+                        class="bg-white hover:bg-slate-100 rounded-full border border-white"
+                      >
+                        <img
+                          src="{{url_for('static', filename='./src/assets/upload-photo.svg')}}"
+                          alt=""
+                          class="w-4 m-1"
+                        />
+                      </picture>
+
+                      <label
+                        for="uploadLogo"
+                        class="font-semibold cursor-pointer text-sm text-white"
+                      >
+                        Change Logo
+                      </label>
+                      <input
+                        id="uploadLogo"
+                        type="file"
+                        accept="image/*"
+                        class="hidden"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                    <h4 class="font-semibold text-base leading-4 text-stone-800 ">
+                        Abc Builders
+                    </h4>
+                    <div class="flex">
+                        <!-- <h4 class="font-semibold text-base leading-4 text-stone-800 ">
+                            Abc Builders
+                        </h4> -->
+                        <input type="text" class="text-center w-36 border border-slate-200 p-1.5 rounded-3xl leading-4 text-stone-500  focus:border-[#8E2157] focus:outline-none text-base shadow-sm shadow-black/5" placeholder="Ahmad Khan">
+                </div>
+                </div>
+              </div>
+
+              <!-- this div is just for managing layout  -->
+              <div class="flex w-16 opacity-0">
+                <span
+                  class="text-xs font-semibold"
+                  >AA</span
+                >
+              </div>
+            </div>
+
+            <!-- input text fields  -->
+
+            <div class="flex flex-col gap-7">
+              <!-- personal info  -->
+              <div
+                class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+                  <!-- Username  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/at-red.svg')}}"
+                        class="w-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="username" class="font-normal text-xs pl-2"
+                        >Username</label
+                      >
+                      <input
+                      readonly
+                        id="username"
+                        type="text"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5  focus:outline-none shadow-sm shadow-black/5 bg-stone-100 hover:bg-stone-50"
+                        placeholder="abc311"
+                      />
+                    </div>
+                    </div>
+
+
+                    
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+
+                  </div>
+
+                  <!-- Email  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/envelope-red.svg')}}"
+                        class="w-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="email" class="font-normal text-xs pl-2"
+                        >Email</label
+                      >
+                      <input
+                        id="email"
+                        type="email"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                        placeholder="abc@gmail.com"
+                      />
+                    </div>
+                    </div>
+
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+                    
+                  </div>
+
+                  <!-- Contact Number  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/card.svg')}}"
+                        class="h-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="number" class="font-normal text-xs pl-2"
+                        >Contact Number</label
+                      >
+                      <input
+                        id="number"
+                        type="text"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                        placeholder="+974 1234 4567"
+                      />
+                    </div>
+                    </div>
+
+                    
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+                  </div>
+
+                  <!-- Organization Name   -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/Department.svg')}}"
+                        class="h-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="org_name" class="font-normal text-xs pl-2"
+                        >Organization Name
+                      </label>
+                      <input
+                      readonly
+                        id="org_name"
+                        type="text"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5  focus:outline-none shadow-sm shadow-black/5 bg-stone-100 hover:bg-stone-50"
+                        placeholder="abc Builders"
+                      />
+                    </div>
+                    </div>
+                    
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+                  </div>
+
+                  <!-- LinkedIn Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/linkedin.svg')}}"
+                        class="w-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="linkedin" class="font-normal text-xs pl-2"
+                        >LinkedIn Profile Link</label
+                      >
+                      <input
+                        type="url"
+                        id="linkedin"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                        placeholder="https://www.linkedIn.com"
+                      />
+                    </div>
+                    </div>
+                    
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+                  </div>
+
+                  <!-- Facebook Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                    <div>
+                      <img
+                        src="{{url_for('static', filename='./src/assets/facebook.svg')}}"
+                        class="w-7 sm:w-8 mb-2.5"
+                        alt="email-svg"
+                      />
+                    </div>
+                    <div
+                      class="flex flex-col text-stone-500 font-medium w-full"
+                    >
+                      <label for="facebook" class="font-normal text-xs pl-2"
+                        >Facebook Profile Link</label
+                      >
+                      <input
+                        type="url"
+                        id="facebook"
+                        class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                        placeholder="https://www.facebook.com"
+                      />
+                    </div>
+                </div>
+                    <div class="flex w-full">
+                        <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                          >Error here</span
+                        >
+                      </div>
+
+                  </div>
+
+                  <!-- Instagram Profile  -->
+                  <div class="flex flex-col items-end gap-1">
+                    <div class="flex items-end gap-2 w-full">
+                      <div>
+                        <img
+                          src="{{url_for('static', filename='./src/assets/instagram.svg')}}"
+                          class="w-7 sm:w-8 mb-2.5"
+                          alt="email-svg"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-col text-stone-500 font-medium w-full"
+                      >
+                        <label for="instagram" class="font-normal text-xs pl-2"
+                          >Instagram Profile Link</label
+                        >
+                        <input
+                          type="url"
+                          id="instagram"
+                          class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                          placeholder="https://www.instagram.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex w-full">
+                      <span class="hidden c-text-xs text-red-500 sm:text-xs pl-12"
+                        >Error here</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- submit button  -->
+              <button
+                type="submit"
+                class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+    
+    <script>
+      // image upload
+      const uploadLogo = document.getElementById("uploadLogo");
+      const profileImage = document.getElementById("profileImage");
+
+      // Handle image preview
+      uploadLogo.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => (profileImage.src = e.target.result);
+          reader.readAsDataURL(file);
+        }
+      });
+
+    </script>
+
+
+{% endblock %}

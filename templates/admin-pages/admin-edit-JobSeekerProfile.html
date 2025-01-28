@@ -1,0 +1,711 @@
+{% extends "admin_base.html" %}
+{% block title %} Edit Jobseeker Profile {% endblock %}
+{% block body %}
+
+   
+
+    <!-- -->
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+
+          <div class="">
+            <h3
+              class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+            >
+            Edit Jobseeker Profile 
+            </h3>
+          </div>
+
+                <!-- profile card  -->
+          <form
+          id="editForm"
+          class="flex flex-col gap-3 bg-white hover:bg-stone-50 px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+        >
+          <!-- profile pic  -->
+          <div class="flex justify-center">
+            <!-- profile Picture   -->
+            <div class="flex flex-col gap-1 items-center justify-center">
+              <div
+                class="flex rounded-full border-4 w-24 h-24 justify-center items-center flex-shrink-0"
+              >
+                <img
+                  id="profileImage"
+                  src="{{url_for('static', filename='./src/assets/profile3.webp')}}"
+                  class="w-20 h-20 rounded-full object-cover object-top"
+                  alt=""
+                />
+              </div>
+              <!-- File Input for Upload -->
+              <div class="flex flex-col justify-center items-center">
+                <div
+                  class="b-bg-h-color flex gap-1 rounded-full pr-2 items-center border border-white"
+                >
+                  <picture
+                    class="bg-white hover:bg-slate-100 rounded-full border border-white"
+                  >
+                    <img
+                      src="{{url_for('static', filename='./src/assets/upload-photo.svg')}}"
+                      alt=""
+                      class="w-4 m-1"
+                    />
+                  </picture>
+
+                  <label
+                    for="uploadImage"
+                    class="font-semibold cursor-pointer text-sm text-white"
+                  >
+                    Upload Photo
+                  </label>
+                  <input
+                    id="uploadImage"
+                    type="file"
+                    accept="image/*"
+                    class="hidden"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <!-- input text fields  -->
+
+          <div class="flex flex-col gap-7">
+            <!-- personal info  -->
+            <div
+              class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+            >
+              <h3 class="text-sm sm:text-base b-color font-semibold pl-1">
+                Personal Information
+              </h3>
+              <div class="flex flex-col gap-3">
+                <!-- Name  -->
+                <div class="flex flex-col gap-0.5">
+                  <input
+                    required
+                    name=""
+                    id="name"
+                    type="text"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Enter You Name here (As per QID)"
+                  />
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+
+                   <!-- Gender License  -->
+                   <div class="flex flex-col gap-0.5">
+                    <label
+                      for="gender"
+                      class="font-medium text-xs sm:text-sm pl-2"
+                    >
+                      Gender</label
+                    >
+                    <select
+                      required
+                      name=""
+                      id="gender"
+                      class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                    >
+                      <option value="" disabled selected>
+                        Select Your Gender
+                      </option>
+                      <option value="yes">Male</option>
+                      <option value="no">Female</option>
+                    </select>
+                    
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                  </div>
+
+
+                <!-- About Me  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="aboutMe" class="font-medium text-xs sm:text-sm pl-2">
+                    About Me</label
+                  >
+                  <textarea
+                    required
+                    rows="3"
+                    name=""
+                    id="aboutMe"
+                    class="border w-full rounded-lg text-xs px-2 py-3 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                  >
+Describe yourself</textarea
+                  >
+
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- professional info  -->
+            <div
+              class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+            >
+              <h3 class="text-sm sm:text-base b-color font-semibold pl-1">
+                Professional Information
+              </h3>
+              <div class="flex flex-col gap-3">
+                <!-- Profession  -->
+                <div class="flex flex-col gap-0.5">
+                  <select
+                    required
+                    name=""
+                    id="profession"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Select a profession
+                    </option>
+                    <option value="3D_Designer">3D Designer</option>
+                    <option value="AC_Technician">AC Technician</option>
+                    <option value="Accounts">Accounts / Finance</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Architect">
+                      Architect / Interior Designer
+                    </option>
+                    <option value="Arabic_Translator">
+                      Arabic Translator
+                    </option>
+                    <option value="Barista">Barista / Bartender</option>
+                    <option value="Business_Developer">
+                      Business Developer
+                    </option>
+                    <option value="Carpenter">Carpenter</option>
+                    <option value="Cabin_Crew">Cabin Crew</option>
+                    <option value="CCTV_Operator">CCTV Operator</option>
+                    <option value="Chemical_Engineer">
+                      Chemical Engineer
+                    </option>
+                    <option value="Chef">Chef / Cook</option>
+                    <option value="Chiropractor">Chiropractor</option>
+                    <option value="Civil_Engineer">Civil Engineer</option>
+                    <option value="Cleaner">Cleaner</option>
+                    <option value="Compliance">Compliance</option>
+                    <option value="Computer_Programmer">
+                      Computer Programmer
+                    </option>
+                    <option value="Crane_Operator">Crane Operator</option>
+                    <option value="Customer_Service">
+                      Customer Service Representative
+                    </option>
+                    <option value="Dental_Assistant">Dental Assistant</option>
+                    <option value="Digital_Marketer">Digital Marketer</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Document_Controller">
+                      Document Controller
+                    </option>
+                    <option value="Driver">Driver / Biker</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Electrical_Engineer">
+                      Electrical Engineer
+                    </option>
+                    <option value="Environmental_Engineer">
+                      Environmental Engineer
+                    </option>
+                    <option value="Event_Manager">Event Manager</option>
+                    <option value="Firefighter">Firefighter</option>
+                    <option value="Foreman">Foreman / Supervisor</option>
+                    <option value="Generator_Operator">
+                      Generator Operator
+                    </option>
+                    <option value="Graphics_Designer">
+                      Graphics Designer
+                    </option>
+                    <option value="Gym_Instructor">Gym Instructor</option>
+                    <option value="Hair_Stylist">
+                      Hair Stylist / Barber
+                    </option>
+                    <option value="HR">HR</option>
+                    <option value="HSE">HSE</option>
+                    <option value="IT_Engineer">IT Engineer</option>
+                    <option value="Journalist">Journalist</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Librarian">Librarian</option>
+                    <option value="Loader">Loader</option>
+                    <option value="Machinist">Machinist</option>
+                    <option value="Maid">Maid / Khadim(a)</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Mason">Mason</option>
+                    <option value="Masseur">
+                      Masseur / Massage Therapist
+                    </option>
+                    <option value="Mechanical_Engineer">
+                      Mechanical Engineer
+                    </option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Metal_Worker">Metal Worker</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Painter">Painter</option>
+                    <option value="Pharmacist">Pharmacist</option>
+                    <option value="Photographer">Photographer</option>
+                    <option value="Petroleum_Engineer">
+                      Petroleum Engineer
+                    </option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Police_Officer">Police Officer</option>
+                    <option value="PRO">PRO</option>
+                    <option value="Psychologist">Psychologist</option>
+                    <option value="Quran_Teacher">Quran Teacher</option>
+                    <option value="Radiologist">Radiologist</option>
+                    <option value="Receptionist">Receptionist</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Secretary">Secretary</option>
+                    <option value="Security">Security</option>
+                    <option value="Software_Engineer">
+                      Software Engineer
+                    </option>
+                    <option value="Steel_Fixer">Steel Fixer</option>
+                    <option value="Storekeeper">Storekeeper</option>
+                    <option value="Supply_Chain">
+                      Supply Chain / Procurement
+                    </option>
+                    <option value="Tailor">Tailor</option>
+                    <option value="Tea_Boy">Tea Boy / Office Boy</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Therapist">Therapist</option>
+                    <option value="Trainer">Trainer</option>
+                    <option value="Typist">Typist</option>
+                    <option value="Welder">Welder</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Not_Listed">Not listed</option>
+                  </select>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+                <!-- Highest Qualification  -->
+                <div class="flex flex-col gap-0.5">
+                  <label
+                    for="highest_Qualification"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                    Highest Qualification
+                  </label>
+                  <select
+                    required
+                    name=""
+                    id="highest_Qualification"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Highest Qualification
+                    </option>
+                    <option value="Matric">Matric</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Masters">Masters</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Not_listed">Not listed</option>
+                  </select>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Total Experience  -->
+                <div class="flex flex-col gap-0.5">
+                  <label
+                    for="total_Experience"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                    Total Experience</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="total_Experience"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Total Experience
+                    </option>
+                    <option value="No_Experience">No Experience</option>
+                    <option value="1year">1 - 2 Years</option>
+                    <option value="3year">3 - 5 Years</option>
+                    <option value="6year">6 - 10 Years</option>
+                    <option value="11year">11 - 20 Years</option>
+                    <option value="20year">20+ Years</option>
+                  </select>
+
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Gulf Experience  -->
+                <div class="flex flex-col gap-0.5">
+                  <label
+                    for="gulf_Experience"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                    Gulf Experience</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="gulf_Experience"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Gulf Experience
+                    </option>
+                    <option value="gulf_No_Experience">No Experience</option>
+                    <option value="gulf_1year">1 - 2 Years</option>
+                    <option value="gulf_3year">3 - 5 Years</option>
+                    <option value="gulf_6year">6 - 10 Years</option>
+                    <option value="gulf_11year">11 - 20 Years</option>
+                    <option value="gulf_20year">20+ Years</option>
+                  </select>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Driving License  -->
+                <div class="flex flex-col gap-0.5">
+                  <label
+                    for="driving_License"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                    Driving License</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="driving_License"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Driving License
+                    </option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="Under_progress">Under progress</option>
+                  </select>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Current Location  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="curr_Location" class="font-medium text-xs sm:text-sm pl-2">
+                    Current Location</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="curr_Location"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Current Location
+                    </option>
+                    <option value="Outside_Qatar">Outside Qatar</option>
+                    <option value="Qatar">Qatar</option>
+                  </select>
+
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Nationality  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="nationality" class="font-medium text-xs sm:text-sm pl-2">
+                    Nationality</label
+                  >
+
+                  <select
+                    required
+                    name=""
+                    id="nationality"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>Nationality</option>
+                    <option value="American">American</option>
+                    <option value="Bangladeshi">Bangladeshi</option>
+                    <option value="British">British</option>
+                    <option value="Canadian">Canadian</option>
+                    <option value="Egyptian">Egyptian</option>
+                    <option value="Filipino">Filipino</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Ghanaian">Ghanaian</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Jordanian">Jordanian</option>
+                    <option value="Kenyan">Kenyan</option>
+                    <option value="Lebanese">Lebanese</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Malaysian">Malaysian</option>
+                    <option value="Moroccan">Moroccan</option>
+                    <option value="Nepalese">Nepalese</option>
+                    <option value="Pakistani">Pakistani</option>
+                    <option value="South_African">South African</option>
+                    <option value="Sri_lankan">Sri Lankan</option>
+                    <option value="Sudanese">Sudanese</option>
+                    <option value="Sudanese">Sudanese</option>
+                    <option value="Syrian">Syrian</option>
+                    <option value="Tunisian">Tunisian</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Ugandan">Ugandan</option>
+                    <option value="Not_listed">Not listed</option>
+                  </select>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Current Salary  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="currSalary" class="font-medium text-xs sm:text-sm pl-2">
+                    Current Salary</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="currSalary"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Your Current Salary
+                    </option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="1k_qar">1000 - 2000 QAR</option>
+                    <option value="2k_qar">2000 - 4000 QAR</option>
+                    <option value="4k_qar">4000 - 6000 QAR</option>
+                    <option value="6k_qar">6000 - 8000 QAR</option>
+                    <option value="8k_qar">8000 - 10,000 QAR</option>
+                    <option value="10k_qar">10,000 - 15,000 QAR</option>
+                    <option value="15k_qar">15,000 - 20,000 QAR</option>
+                    <option value="20k_qar">20,000 - 30,000 QAR</option>
+                    <option value="30k_qar">30,000+ QAR</option>
+                  </select>
+
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Expected Salary  -->
+                <div class="flex flex-col gap-0.5">
+                  <label
+                    for="expectedSalary"
+                    class="font-medium text-xs sm:text-sm pl-2"
+                  >
+                    Expected Salary</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="expectedSalary"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                      Your Expected Salary
+                    </option>
+                    <option value="exp_1k_qar">1000 - 2000 QAR</option>
+                    <option value="exp_2k_qar">2000 - 4000 QAR</option>
+                    <option value="exp_4k_qar">4000 - 6000 QAR</option>
+                    <option value="exp_6k_qar">6000 - 8000 QAR</option>
+                    <option value="exp_8k_qar">8000 - 10,000 QAR</option>
+                    <option value="exp_10k_qar">10,000 - 15,000 QAR</option>
+                    <option value="exp_15k_qar">15,000 - 20,000 QAR</option>
+                    <option value="exp_20k_qar">20,000 - 30,000 QAR</option>
+                    <option value="exp_30k_qar">30,000+ QAR</option>
+                  </select>
+
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- contact info  -->
+            <div
+              class="flex flex-col gap-1 bg-stone-100 hover:bg-stone-50 p-2 rounded-2xl shadow-sm shadow-black/10"
+            >
+              <h3 class="text-sm sm:text-base b-color font-semibold pl-1">
+                Contact Information
+              </h3>
+              <div class="flex flex-col gap-3">
+                <!-- Email  -->
+                <div class="flex flex-col gap-0.5">
+                  <input
+                    required
+                    type="email"
+                    id="email"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Please Enter Your Email"
+                  />
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Contact Number  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="number" class="font-medium text-xs sm:text-sm pl-2">
+                    Contact Number</label
+                  >
+                  <input
+                    required
+                    type="text"
+                    id="number"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Please Enter Your Number"
+                  />
+                  <div class="flex justify-between px-3">
+                    <div class="flex">
+                      <span class="text-stone-700 c-text-xs">
+                        Do you want to Public Your Number</span
+                      >
+                    </div>
+                    <!-- yes no radio -->
+                    <div class="flex gap-2">
+                      <!-- yes  -->
+                      <div class="flex gap-0.5 c-text-uxs items-center">
+                        <input
+                          type="radio"
+                          name="contactNum"
+                          class="c-accent"
+                          id="yes"
+                        />
+                        <label for="yes" class="c-text-sm">Yes</label>
+                      </div>
+                      <!-- no  -->
+                      <div class="flex gap-0.5 c-text-uxs items-center">
+                        <input
+                          type="radio"
+                          name="contactNum"
+                          class="c-accent"
+                          id="no"
+                        />
+                        <label for="no" class="c-text-sm">No</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- LinkedIn Profile  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="linkedin" class="font-medium text-xs sm:text-sm pl-2">
+                    LinkedIn Profile Link (Optional)</label
+                  >
+                  <input
+                    type="url"
+                    id="linkedin"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Please Provide the url"
+                  />
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- QID  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="qid" class="font-medium text-xs sm:text-sm pl-2">
+                    Qatar ID(QID)</label
+                  >
+                  <input
+                    required
+                    type="text"
+                    id="qid"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                    placeholder="Enter Your Valid Qatar ID 11 Digits"
+                  />
+                  <span class="text-stone-700 c-text-uxs px-3">
+                    The QID will be not be Public and only be used for
+                    validating the information.</span
+                  >
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+
+                <!-- Date Of Birth  -->
+                <div class="flex flex-col gap-0.5">
+                  <label for="dob" class="font-medium text-xs sm:text-sm pl-2">
+                    Date Of Birth</label
+                  >
+                  <input
+                    required
+                    type="date"
+                    id="dob"
+                    class="border w-full rounded-full text-xs px-2 py-3 sm:py-3.5 focus:border-[#8E2157] focus:outline-none shadow-sm shadow-black/5"
+                  />
+                  
+                  <span class="hidden c-text-xs text-red-500 sm:text-xs pl-3">Error here</span>
+                </div>
+              </div>
+            </div>
+
+                <!-- personal info  -->
+                <div
+                class="flex flex-col gap-1 bg-[#5c0931] bg-opacity-95 hover:bg-opacity-85 p-2 rounded-2xl shadow-sm shadow-black/10"
+              >
+                <div class="flex flex-col gap-3">
+
+                    <label
+                    for="feature_status"
+                    class="font-medium text-xs sm:text-sm pl-2 text-white"
+                  >
+                  Assign Feature Status</label
+                  >
+                  <select
+                    required
+                    name=""
+                    id="feature_status"
+                    class="w-full rounded-full border px-2 py-3 text-xs sm:py-3.5 focus:outline-none focus:ring-1 focus:ring-[#8E2157] shadow-sm shadow-black/5"
+                  >
+                    <option value="" disabled selected>
+                        Assign Feature Status from the drop down
+                    </option>
+                    <option value="0_days">0 Days</option>
+                    <option value="10_days">10 Days</option>
+                    <option value="20_days">20 Days</option>
+                    <option value="30_days">30 Days</option>
+                  </select>
+
+                    </div>
+
+                    </div>
+
+            <!-- submit button  -->
+            <button
+              type="submit"
+              class="px-4 py-2 m-btn text-sm rounded-full shadow-sm shadow-black/15"
+            >
+              Update
+            </button>
+          </div>
+
+
+        </form>
+        </div>
+      </main>
+      <script>
+        // image upload
+        const uploadImage = document.getElementById("uploadImage");
+        const profileImage = document.getElementById("profileImage");
+      
+        // Handle image preview
+        uploadImage.addEventListener("change", (event) => {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => (profileImage.src = e.target.result);
+            reader.readAsDataURL(file);
+          }
+        });
+      
+        
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menuBtn.classList.toggle('active');
+        });
+        
+      
+      </script>
+
+{% endblock %}

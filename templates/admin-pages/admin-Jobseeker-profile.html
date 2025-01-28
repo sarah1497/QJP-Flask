@@ -1,0 +1,322 @@
+{% extends "admin_base.html" %}
+{% block title %} Jobseeker Profile {% endblock %}
+{% block body %}
+
+
+  <!-- -->
+    <div id="" class="md:w-full flex md:items-center flex-col">
+      <main class="main !mt-14 !mb-14">
+        <!-- body  -->
+        <div class="flex flex-col gap-4 rounded-xl">
+          <div class="">
+            <h3
+              class="font-semibold sm:font-bold text-base sm:text-lg b-color"
+            >
+              Jobseeker Profile
+            </h3>
+          </div>
+               <!-- profile card  -->
+               <div class="flex flex-col gap-0.5">
+                <div
+                  class="flex flex-col gap-3 bg-white hover:bg-stone-50 px-3 py-4 rounded-xl shadow-sm shadow-black/40"
+                >
+                  <!-- profile pic  -->
+                  <div class="flex justify-between">
+                    <!-- linkedin  -->
+                    <a href="" class="flex w-16 justify-start items-start">
+                      <img src="{{url_for('static', filename='./src/assets/linkedin.svg')}}" alt="" class="w-6 flex">
+                    </a>
+                    <!-- profile Picture   -->
+                    <div class="flex flex-col gap-1 items-center justify-center">
+                      <div
+                        class="flex rounded-full border-4 w-24 h-24 justify-center items-center flex-shrink-0"
+                      >
+                        <img
+                          src="{{url_for('static', filename='./src/assets/profile3.webp')}}"
+                          class="w-20 h-20 rounded-full object-cover object-top"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col gap-0.5 items-center">
+                        <h3 class="text-base font-semibold m-color">Sheraz Khan</h3>
+    
+                        <!-- profession  -->
+                        <span class="flex t-xs font-medium text-stone-800 "
+                          >Graphic Designer</span
+                        >
+    
+                        <!-- emplyment status  -->
+                        <span class="flex t-xs font-medium text-stone-800"
+                          >Unemployed</span
+                        >
+                      </div>
+                    </div>
+                    <!-- edit profile link  -->
+                    <div class="flex w-16">
+                      <a href="./admin_edit_JobSeekerProfile" class="c-underline text-xs font-semibold">Edit profile</a>
+                    </div>
+                  </div>
+    
+                  <!-- about me  -->
+                  <div class="flex flex-col gap-0.5">
+                    <div class="flex">
+                      <h4 class="t-xs-plus font-semibold text-black">About Me</h4>
+                    </div>
+                    <!-- about me Description  -->
+                    <div class="flex t-xs text-stone-800">
+                      <p class="flex">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequatur vel aperiam quibusdam quas, consequuntur amet
+                        eos rem ab facilis dolorem, unde velit molestias sint omnis
+                        dolores nesciunt. Distinctio deleniti laborum accusamus,
+                        natus odio, perspiciatis nobis iste, cum molestiae minus
+                        non!
+                      </p>
+                    </div>
+                  </div>
+    
+                  <!-- Other info  -->
+                  <div class="flex justify-between items-center flex-wrap gap-4">
+                    <!-- highest Qualification  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Highest Qualification
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Matric</span>
+                      </div>
+                    </div>
+    
+                    <!-- Nationality  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">Nationality</h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Pakistan</span>
+                      </div>
+                    </div>
+    
+                    <!--Total Experience   -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Total Experience
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">2 years</span>
+                      </div>
+                    </div>
+    
+                    <!--Gulf Experience   -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Gulf Experience
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">none</span>
+                      </div>
+                    </div>
+    
+                    <!-- Current Location   -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Current Location
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Qatar</span>
+                      </div>
+                    </div>
+    
+                    <!-- Driving License   -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Driving License
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Yes</span>
+                      </div>
+                    </div>
+    
+                    <!-- Current Salary  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Current Salary
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">1,000-2,000 QAR</span>
+                      </div>
+                    </div>
+    
+                    <!-- Expected Salary  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Expected Salary
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">1,000-2,000 QAR</span>
+                      </div>
+                    </div>
+    
+                    <!-- Gender  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">Gender</h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Male</span>
+                      </div>
+                    </div>
+    
+                    <!-- Email  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">Email</h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">info@email.com</span>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                    <!-- Private Information  -->
+                  <div class="flex flex-col gap-4">
+                    <div class="flex justify-center">
+                      <h4 class="text-base font-semibold m-color">Private Information</h4>
+                    </div>
+
+                    <div class="flex justify-between items-center flex-wrap gap-4">
+                    <!-- Contact Number  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Contact Number
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">+974 1234 5678
+                        </span>
+                      </div>
+                    </div>
+    
+                    <!-- Contact Number Public  -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">Contact Number Public
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">Yes
+                        </span>
+                      </div>
+                    </div>
+    
+                    <!-- QID   -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          QID
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">29118611151
+                        </span>
+                      </div>
+                    </div>
+    
+                    <!-- Date of Birth -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                          Date of Birth
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <span class="t-xs text-stone-800">22-01-2000
+                        </span>
+                      </div>
+                    </div>
+    
+                    <!-- Date of Birth -->
+                    <div class="flex flex-col gap-0.5 w-5/12">
+                      <div class="flex">
+                        <h4 class="t-xs-plus font-medium text-black">
+                         LinkedIn
+                        </h4>
+                      </div>
+                      <div class="flex">
+                        <a href="" class="t-xs text-stone-800 cursor-pointer">https://www.linkedin.com/..
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+    
+                  </div>
+    
+                  <!-- contact Details  -->
+    
+                  <div class="flex flex-col gap-0.5 items-center justify-center">
+    
+                    <div class="flex gap-4">
+                      <div class="flex">
+                        <a href="" class="px-4 py-1.5 m-btn t-xs-plus rounded-full"
+                          >Approve</a
+                        >
+                      </div>
+    
+                      <div class="flex">
+                        <a href="" class="px-4 py-2 m-btn t-xs-plus rounded-full"
+                          >Reject</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                      <!-- profile id & last update  -->
+                <div class="flex px-4 items-center justify-between">
+                  <!-- ID  -->
+                  <span class="c-text-sm text-stone-700 tracking-tight"
+                    >Profile ID: <span class="text-stone-800">435366</span>
+                  </span>
+                  
+                </div>
+
+
+                </div>
+    
+            
+              </div>
+        </div>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+      <script>
+       
+  
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menuBtn.classList.toggle('active');
+        });
+        
+        </script>
+
+{% endblock %}
